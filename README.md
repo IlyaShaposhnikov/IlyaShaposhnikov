@@ -88,12 +88,12 @@
 
 ## 🔬 CountVectorizer Comparison Project (NLP)
 
-**Экспериментальный проект для сравнения эффективности 5 методов предобработки текста** (стемминг, лемматизация, удаление стоп-слов и др.) при векторизации через `CountVectorizer` на датасете BBC News.
+**Проект для сравнения эффективности 5 методов предобработки текста** (стемминг, лемматизация, удаление стоп-слов и др.) при векторизации через `CountVectorizer` на датасете BBC News.
 
 **✨ Ключевые особенности:**
 *   **Сравнительный анализ:** Прямое сравнение 5 подходов к обработке текста по точности, размеру словаря, времени работы и плотности матрицы.
-*   **Глубокий фокус на NLP:** Реализация и оценка лингвистических методов (лемматизация NLTK, стемминг).
-*   **Четкие выводы:** Выявление оптимального метода (удаление стоп-слов), обеспечившего баланс точности (97.49%) и скорости (0.46 с).
+*   **Глубокий фокус на NLP:** Реализация и оценка лингвистических методов (лемматизация, стемминг).
+*   **Четкие выводы:** Выявление оптимального метода, обеспечившего баланс точности и скорости.
 *   **Полная визуализация:** Автоматическая генерация сравнительных графиков и таблиц.
 
 **🛠 Стек технологий:**
@@ -105,3 +105,25 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/count-vectorizer)
+
+
+## 💰 Wallet REST API [FastAPI, PostgreSQL]
+
+**Высоконагруженное асинхронное REST API для управления финансовыми балансами.** Сервис гарантирует консистентность данных при параллельных операциях пополнения и списания, реализуя паттерн электронного кошелька.
+
+**✨ Ключевые особенности:**
+*   **Конкурентная безопасность:** Гарантия целостности данных через транзакции `READ COMMITTED` и строковые блокировки `SELECT ... FOR UPDATE`.
+*   **Производственный стек:** Полный цикл от асинхронного бэкенда до контейнеризации.
+*   **Готовый к деплою:** Проект полностью настроен для запуска в Docker с оркестрацией (`docker-compose`).
+*   **Полная документация:** Автоматическая генерация интерактивной документации OpenAPI (Swagger) по адресу `/docs`.
+
+**🛠 Стек технологий:**
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=python&logoColor=white)
+![Alembic](https://img.shields.io/badge/Alembic-000000?style=for-the-badge&logo=alembic&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/wallet-api) | [**📖 Документация API (после запуска)**](http://localhost:8080/docs)
+
