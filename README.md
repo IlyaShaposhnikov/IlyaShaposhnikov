@@ -73,6 +73,7 @@
 | **AI & Интеллектуальные системы** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B). |
 | **Машинное обучение & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актёры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
 | **Исследование & Анализ данных** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Сравнительный анализ 5 методов предобработки текста (стемминг, лемматизация и др.) для задачи классификации новостей. Включает оценку по точности, скорости и размеру словаря. |
+| **Исследование & Анализ данных** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Сравнительный анализ TF-IDF: реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
 | **Веб-сервисы & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
 
 ### 💰 Wallet REST API [FastAPI, PostgreSQL]
@@ -154,6 +155,25 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/count-vectorizer)
+
+
+### 🔑 Text Keyword Extractor [TF-IDF, NLP]
+
+**Исследовательский проект по глубокому анализу алгоритма TF-IDF: собственная реализация с нуля и детальное сравнение с библиотечной реализацией scikit-learn** для задачи извлечения ключевых слов из текстовых документов (датасет BBC News).
+
+**✨ Ключевые особенности:**
+*   **TF-IDF с нуля:** Чистая, документированная реализация алгоритма TF-IDF на Python без использования сторонних библиотек для векторного представления.
+*   **Сравнительный анализ алгоритмов:** Прямое, пошаговое сравнение результатов и формул собственной реализации (`idf = log(N / df)`) и оптимизированной версии scikit-learn (`idf = log((1 + N) / (1 + df)) + 1` с L2-нормализацией).
+*   **Аналитический CLI:** Интерактивный консольный интерфейс для полноценного исследования: поиск документов по словам, извлечение топ-N ключевых слов с весами, сравнение реализаций TF-IDF и анализ случайных документов.
+*   **Промышленные практики:** Использование `NLTK` для обработки стоп-слов, пагинация результатов, модульная архитектура и работа с реальным датасетом.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/text-keyword-extractor)
 
 
 ### 🔗 URL Shortener Service [Flask, REST API]
