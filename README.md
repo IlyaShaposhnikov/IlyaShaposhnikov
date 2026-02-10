@@ -52,7 +52,7 @@ I apply the same mindset to Python development: I focus on building **robust, pr
 
 ## 🗣️ [Natural] Languages
 *   🇷🇺  **Russian:** Native
-*  🇬🇧🇺🇸 **English:** C2 (Proficient)
+*   🇬🇧  **English:** C2 (Proficient)
 *   🇪🇸  **Spanish:** C1 (Advanced)
 *   🇫🇷  **French:** B2 (Upper-Intermediate)
 *   🇩🇪  **German:** B1 (Intermediate)
