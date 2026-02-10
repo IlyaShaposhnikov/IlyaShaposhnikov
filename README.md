@@ -1,12 +1,14 @@
-# 👋 Привет, я Илья Шапошников
+🇷🇺 [На русском / Russian Version](README.ru.md)
 
-**Python-разработчик**, создающий backend-сервисы и интегрирующий машинное обучение для решения практических задач. Подхожу к разработке как к решению бизнес-проблемы: ценю чистую, поддерживаемую архитектуру и измеримый результат.
+# 👋 Hi, I'm Ilya Shaposhnikov
 
-Более **12 лет работал над оптимизацией сложных процессов** в международной компании, где инициировал и внедрял IT-решения (от автоматизации отчётности до внедрения корпоративных CAT-систем). Этот опыт сформировал **системное мышление, умение анализировать процессы и доводить проекты до внедрения** (реальные результаты: сокращение трудозатрат на 90%, рост операционной скорости на 70%).
+**Python Developer** building backend services and integrating machine learning (**ML**) and **NLP** to solve real-world problems. I approach development as solving business problems: I value clean, maintainable architecture and measurable impact.
 
-В разработке на Python применяю этот же подход: фокусируюсь на создании **надёжных, production-ready решений полного цикла** — от проектирования архитектуры и бизнес-логики до контейнеризации, настройки CI/CD и развёртывания. В портфолио ниже — проекты, которые я спроектировал и реализовал: от высоконагруженных API и современных AI/ML-решений до комплексных веб-сервисов.
+For **over 12 years**, I optimized complex processes at an international corporation, where I initiated and implemented IT solutions (from reporting automation to enterprise CAT system deployment). This experience shaped my **systems thinking, process analysis skills, and ability to drive projects to production** (tangible results: 90% reduction in manual effort, 70% increase in operational speed).
 
-## 🛠 Технологический стек
+I apply the same mindset to Python development: I focus on building **robust, production-ready end-to-end solutions** — from designing architecture and business logic to containerization, CI/CD setup, and deployment. Below are projects I architected and implemented: from high-load APIs and modern AI/ML solutions to comprehensive web services.
+
+## 🛠 Technology Stack
 
 **Backend & Frameworks:**
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
@@ -48,45 +50,44 @@
 ![REST API](https://img.shields.io/badge/REST_API-FF6C37?logo=postman&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white)
 
-## 🗣️ Языки
-*   **Русский:** Родной
-*   **Английский:** C2 (В совершенстве)
-*   **Испанский:** C1 (Продвинутый)
-*   **Французский:** B2 (Средне-продвинутый)
-*   **Немецкий:** B1 (Средний)
+## 🗣️ [Natural] Languages
+*   **Russian:** Native
+*   **English:** C2 (Proficient)
+*   **Spanish:** C1 (Advanced)
+*   **French:** B2 (Upper-Intermediate)
+*   **German:** B1 (Intermediate)
 
-## 🎯 В поиске
-Ищу позицию **Python-разработчика** в проектной команде, где смогу стать связующим звеном между технической и бизнес-составляющей, применяя свой стек и уникальный опыт для создания эффективного кода, который решает реальные проблемы.
+## 🎯 Open to Opportunities
+I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** projects in a product-driven team where I can bridge technical execution and business strategy—applying my tech stack and unique cross-domain experience to build efficient code that solves real-world problems.
 
-**📍 Локация:** Санкт-Петербург (готов к работе в офисе, удалённо и в гибридном формате)
+**📍 Location:** Saint Petersburg, Russia (open to on-site, remote, and hybrid work)
 
-**📧 Контакт:** [ilia.a.shaposhnikov@gmail.com](mailto:ilia.a.shaposhnikov@gmail.com)
+**📧 Contact:** [ilia.a.shaposhnikov@gmail.com](mailto:ilia.a.shaposhnikov@gmail.com)
 
 **📱 Telegram:** [@iliashaposhnikov](https://t.me/iliashaposhnikov)
 
+## 🚀 Key Projects
 
-## 🚀 Ключевые проекты
-
-| Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
+| Category | Project | Key Technologies | Core Concept & Challenges |
 | :--- | :--- | :--- | :--- |
-| **Production Backend** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Асинхронное API для финансовых операций с гарантией консистентности данных при конкурентных запросах (транзакции, блокировки). |
-| **AI & Интеллектуальные системы** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B). |
-| **Машинное обучение & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актёры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
-| **Исследование & Анализ данных** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Сравнительный анализ 5 методов предобработки текста (стемминг, лемматизация и др.) для задачи классификации новостей. Включает оценку по точности, скорости и размеру словаря. |
-| **Исследование & Анализ данных** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Сравнительный анализ TF-IDF: реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
-| **Веб-сервисы & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
+| **Production Backend** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
+| **AI & Intelligent Systems** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B). |
+| **Machine Learning (ML) & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
+| **Data Research & Analysis** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comparative analysis of 5 text preprocessing methods (stemming, lemmatization, etc.) for news classification. Includes evaluation by accuracy, speed, and vocabulary size. |
+| **Data Research & Analysis** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
+| **Web Services & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 
 ### 💰 Wallet REST API [FastAPI, PostgreSQL]
 
-**Высоконагруженное асинхронное REST API для управления финансовыми балансами.** Сервис гарантирует консистентность данных при параллельных операциях пополнения и списания, реализуя паттерн электронного кошелька.
+**High-load asynchronous REST API for managing financial balances.** The service ensures data consistency during concurrent deposit/withdrawal operations, implementing an e-wallet pattern.
 
-**✨ Ключевые особенности:**
-*   **Конкурентная безопасность:** Гарантия целостности данных через транзакции `READ COMMITTED` и строковые блокировки `SELECT ... FOR UPDATE`.
-*   **Производственный стек:** Полный цикл от асинхронного бэкенда до контейнеризации.
-*   **Готовый к деплою:** Проект полностью настроен для запуска в Docker с оркестрацией (`docker-compose`).
-*   **Полная документация:** Автоматическая генерация интерактивной документации OpenAPI (Swagger) по адресу `/docs`.
+**✨ Key Features:**
+*   **Concurrency Safety:** Guarantees data integrity through `READ COMMITTED` transactions and `SELECT ... FOR UPDATE` row-level locks.
+*   **Production-Grade Stack:** Full cycle from asynchronous backend to containerization.
+*   **Deployment Ready:** Fully configured for Docker with orchestration (`docker-compose`).
+*   **Comprehensive Documentation:** Auto-generated interactive OpenAPI (Swagger) documentation at `/docs`.
 
-**🛠 Стек технологий:**
+**🛠 Tech Stack:**
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=python&logoColor=white)
@@ -94,27 +95,27 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/wallet-api) | [**📖 Инструкция по запуску**](https://github.com/IlyaShaposhnikov/wallet-api#быстрый-старт)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/wallet-api)
 
 
 ### 🤖 Video Analytics Bot [AI, LLM, PostgreSQL]
 
-**Интеллектуальный Telegram-бот, преобразующий запросы на естественном русском языке в аналитические SQL-запросы** к базе данных статистики видео. Использует локальную LLM (Ollama + Mistral 7B) для промпт-инжиниринга и генерации кода.
+**Intelligent Telegram bot converting natural language queries into analytical SQL queries** for a video statistics database. Uses a local LLM (Ollama + Mistral 7B) for prompt engineering and code generation.
 
-**✨ Ключевые особенности:**
-*   **NLP-интерфейс:** Пользователь задаёт вопросы на русском языке ("Сколько видео набрало >100K просмотров?"), бот возвращает точный числовой ответ.
-*   **Локальная LLM:** Использование модели **Mistral 7B через Ollama** обеспечивает полную конфиденциальность данных, работу оффлайн и отсутствие лимитов/платежей.
-*   **Промпт-инжиниринг:** Детальный системный промпт с описанием схемы БД, строгими правилами и примерами для стабильной генерации SQL-запросов.
-*   **Production-архитектура:** Асинхронный бот на **Aiogram 3.7+**, оптимизированная **PostgreSQL** с индексами, пул соединений **asyncpg**.
+**✨ Key Features:**
+*   **NLP Interface:** Users ask questions in natural language ("How many videos have >100K views?"), the bot returns a precise numerical answer.
+*   **Local LLM:** **Mistral 7B model via Ollama** ensures complete data privacy, offline operation, and no limits/fees.
+*   **Prompt Engineering:** Detailed system prompt with database schema description, strict rules, and examples for stable SQL query generation.
+*   **Production Architecture:** Asynchronous bot on **Aiogram 3.7+**, optimized **PostgreSQL** with indexes, connection pooling via **asyncpg**.
 
-**🛠 Стек технологий:**
+**🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Aiogram](https://img.shields.io/badge/Aiogram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-3BB143?style=for-the-badge&logo=ollama&logoColor=white)
 ![asyncpg](https://img.shields.io/badge/asyncpg-000000?style=for-the-badge&logo=postgresql&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/video_analytics_bot)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/video_analytics_bot)
 
 
 ### 🎬 Movie Recommendation System [NLP, TF-IDF]
@@ -133,7 +134,7 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
 ![Telegram Bot API](https://img.shields.io/badge/Telegram_Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf) | [**🛠 Установка и запуск**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf#установка-и-запуск)
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
 
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
