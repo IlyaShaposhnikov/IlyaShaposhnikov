@@ -1,6 +1,6 @@
 🇷🇺 [На русском / Russian Version](README.ru.md)
 
-# 👋 Hi, I'm Ilya Shaposhnikov
+# 👋 Hi, my name is Ilya Shaposhnikov
 
 **Python Developer** building backend services and integrating machine learning (**ML**) and **NLP** to solve real-world problems. I approach development as solving business problems: I value clean, maintainable architecture and measurable impact.
 
@@ -51,11 +51,11 @@ I apply the same mindset to Python development: I focus on building **robust, pr
 ![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white)
 
 ## 🗣️ [Natural] Languages
-*   **Russian:** Native
-*   **English:** C2 (Proficient)
-*   **Spanish:** C1 (Advanced)
-*   **French:** B2 (Upper-Intermediate)
-*   **German:** B1 (Intermediate)
+*   🇷🇺  **Russian:** Native
+*  🇬🇧🇺🇸 **English:** C2 (Proficient)
+*   🇪🇸  **Spanish:** C1 (Advanced)
+*   🇫🇷  **French:** B2 (Upper-Intermediate)
+*   🇩🇪  **German:** B1 (Intermediate)
 
 ## 🎯 Open to Opportunities
 I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** projects in a product-driven team where I can bridge technical execution and business strategy—applying my tech stack and unique cross-domain experience to build efficient code that solves real-world problems.
