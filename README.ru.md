@@ -50,7 +50,7 @@
 ![REST API](https://img.shields.io/badge/REST_API-FF6C37?logo=postman&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white)
 
-## 🗣️ Языки
+## 🗣️ [Естественные] языки
 *   **Русский:** Родной
 *   **Английский:** C2 (В совершенстве)
 *   **Испанский:** C1 (Продвинутый)
