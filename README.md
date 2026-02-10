@@ -120,34 +120,34 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 
 ### 🎬 Movie Recommendation System [NLP, TF-IDF]
 
-**Проект для рекомендации фильмов с двумя интерфейсами: Telegram-бот и консольное приложение.** Система анализирует описания и актерский состав, используя методы обработки естественного языка и машинного обучения.
+**Film recommendation engine with dual UI: Telegram bot and console application.** The system analyzes descriptions and cast using NLP and ML techniques.
 
-**✨ Ключевые особенности:**
-*   **Два алгоритма:** Рекомендации на основе **жанров/ключевых слов** и **взвешенного актерского состава**.
-*   **Два интерфейса:** Удобный **Telegram-бот** и наглядный **консольный интерфейс** с графиками.
-*   **Полный цикл:** От предобработки данных (TF-IDF) до интерактивного веб-приложения.
+**✨ Key Features:**
+*   **Two Algorithms:** Recommendations based on **genres/keywords** and **weighted cast analysis**.
+*   **Two Interfaces:** Convenient **Telegram bot** and a visual **console interface** with charts.
+*   **End-to-End Pipeline:** From data preprocessing (TF-IDF) to an interactive web application.
 
-**🛠 Стек технологий:**
+**🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
 ![Telegram Bot API](https://img.shields.io/badge/Telegram_Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
 
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
 
-**Проект для сравнения эффективности 5 методов предобработки текста** (стемминг, лемматизация, удаление стоп-слов и др.) при векторизации через `CountVectorizer` на датасете BBC News.
+**Research project comparing the effectiveness of 5 text preprocessing methods** (stemming, lemmatization, stop-word removal, etc.) when vectorizing with `CountVectorizer` on the BBC News dataset.
 
-**✨ Ключевые особенности:**
-*   **Сравнительный анализ:** Прямое сравнение 5 подходов к обработке текста по точности, размеру словаря, времени работы и плотности матрицы.
-*   **Глубокий фокус на NLP:** Реализация и оценка лингвистических методов (лемматизация, стемминг).
-*   **Четкие выводы:** Выявление оптимального метода, обеспечившего баланс точности и скорости.
-*   **Полная визуализация:** Автоматическая генерация сравнительных графиков и таблиц.
+**✨ Key Features:**
+*   **Comparative Analysis:** Direct comparison of 5 text processing approaches by accuracy, vocabulary size, execution time, and matrix density.
+*   **Deep NLP Focus:** Implementation and evaluation of linguistic methods (lemmatization, stemming).
+*   **Clear Conclusions:** Identification of the optimal method that achieved a balance of accuracy and speed.
+*   **Full Visualization:** Auto-generated comparative charts and tables.
 
-**🛠 Стек технологий:**
+**🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -155,43 +155,45 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 ![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/count-vectorizer)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/count-vectorizer)
 
 
 ### 🔑 Text Keyword Extractor [TF-IDF, NLP]
 
-**Исследовательский проект по глубокому анализу алгоритма TF-IDF: собственная реализация с нуля и детальное сравнение с библиотечной реализацией scikit-learn** для задачи извлечения ключевых слов из текстовых документов (датасет BBC News).
+**Research project conducting in-depth analysis of the TF-IDF algorithm: from-scratch implementation with detailed comparison against scikit-learn's version** for extracting keywords from text documents (BBC News dataset).
 
-**✨ Ключевые особенности:**
-*   **TF-IDF с нуля:** Чистая, документированная реализация алгоритма TF-IDF на Python без использования сторонних библиотек для векторного представления.
-*   **Сравнительный анализ алгоритмов:** Прямое, пошаговое сравнение результатов и формул собственной реализации (`idf = log(N / df)`) и оптимизированной версии scikit-learn (`idf = log((1 + N) / (1 + df)) + 1` с L2-нормализацией).
-*   **Аналитический CLI:** Интерактивный консольный интерфейс для полноценного исследования: поиск документов по словам, извлечение топ-N ключевых слов с весами, сравнение реализаций TF-IDF и анализ случайных документов.
-*   **Промышленные практики:** Использование `NLTK` для обработки стоп-слов, пагинация результатов, модульная архитектура и работа с реальным датасетом.
+**✨ Key Features:**
+*   **TF-IDF from Zero:** Clean, documented pure-Python implementation without using third-party libraries for vector representation.
+*   **Algorithm Comparison:** Step-by-step comparison of manual TF-IDF (`idf = log(N / df)`) vs. scikit-learn's optimized TF-IDF (`idf = log((1 + N) / (1 + df)) + 1` with L2 normalization).
+*   **Analytical CLI:** Interactive console interface for comprehensive exploration: document search by terms, top-N keyword extraction with weights, TF-IDF comparison, and random document analysis.
+*   **Industry Practices:** `NLTK` for stop-word processing, result pagination, modular architecture, and real-world dataset usage.
 
-**🛠 Стек технологий:**
+**🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/text-keyword-extractor)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/text-keyword-extractor)
 
 
 ### 🔗 URL Shortener Service [Flask, REST API]
 
-**Веб-сервис для генерации коротких ссылок с полноценным REST API и веб-интерфейсом.** Позволяет создавать как автоматически сгенерированные короткие ссылки, так и кастомные идентификаторы, с валидацией и сохранением в БД.
+**Web service for generating short URLs with a full-featured REST API and web interface.** Supports both auto-generated short links and custom identifiers, with validation and storage in a database.
 
-**✨ Ключевые особенности:**
-*   **Двойной интерфейс:** Удобный **веб-интерфейс** для ручного создания ссылок и **REST API** для автоматической интеграции с другими сервисами.
-*   **Гибкость создания:** Поддержка как автоматической генерации коротких ID (6 символов), так и задания **пользовательских коротких идентификаторов**.
-*   **Полный цикл работы с данными:** Использование **Flask-Migrate (Alembic)** для управления версиями схемы базы данных, обеспечивая надежное хранение истории ссылок.
-*   **Надежная валидация:** Встроенная проверка корректности исходных URL и кастомных идентификаторов через **Flask-WTF** и **WTForms**.
+**✨ Key Features:**
+*   **Dual Interface:** User-friendly **web interface** for manual link creation and **REST API** for automated integration with other services.
+*   **Creation Flexibility:** Both auto-generated short IDs (6 characters) and **custom short identifiers**.
+*   **Full Data Lifecycle:** **Flask-Migrate (Alembic)** for database schema versioning, ensuring reliable storage of link history.
+*   **Robust Validation:** Built-in validation of source URLs and custom identifiers via **Flask-WTF** and **WTForms**.
 
-**🛠 Стек технологий:**
+**🛠 Tech Stack:**
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=python&logoColor=white)
 ![Alembic](https://img.shields.io/badge/Alembic-000000?style=for-the-badge&logo=alembic&logoColor=white)
 ![REST API](https://img.shields.io/badge/REST_API-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/shortlink_generator)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/shortlink_generator)
+
+🇷🇺 [На русском / Russian Version](README.ru.md)
