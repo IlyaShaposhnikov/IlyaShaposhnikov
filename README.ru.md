@@ -196,3 +196,5 @@
 ![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/shortlink_generator)
+
+🌍 [English Version](README.md)
