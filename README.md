@@ -1,6 +1,6 @@
 🇷🇺 [На русском / Russian Version](README.ru.md)
 
-# 👋 Hi, my name is Ilya Shaposhnikov
+# 👋 Hi, I'm Ilya Shaposhnikov
 
 **Python Developer** building backend services and integrating machine learning (**ML**) and **NLP** to solve real-world problems. I approach development as solving business problems: I value clean, maintainable architecture and measurable impact.
 
