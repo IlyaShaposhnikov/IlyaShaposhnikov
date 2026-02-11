@@ -198,6 +198,6 @@
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/social_network_api)
 
 
-🔙 **[Key Projects](README.md)**
+🔙 **[Key Projects](README.md#-key-projects)**
 
 🇷🇺 **[Russian Version / На русском](README.full.ru.md)**
