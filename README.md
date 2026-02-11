@@ -14,16 +14,21 @@ I apply the same mindset to Python development: I focus on building **robust, pr
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white)
 ![Django REST Framework](https://img.shields.io/badge/DRF-092E20?logo=django&logoColor=white)
+![Djoser](https://img.shields.io/badge/Djoser-092E20?logo=django&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white)
+![Aiogram](https://img.shields.io/badge/Aiogram-26A5E4?logo=telegram&logoColor=white)
+![Telegram Bot API](https://img.shields.io/badge/Telegram_Bot_API-26A5E4?logo=telegram&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?logo=python&logoColor=white)
 ![Alembic](https://img.shields.io/badge/Alembic-000000?logo=alembic&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-92000?logo=pydantic&logoColor=white)
 
 **Data Science & Machine Learning:**
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?logo=python&logoColor=white)
 ![NLTK](https://img.shields.io/badge/NLTK-3BB143?logo=python&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-3BB143?logo=ollama&logoColor=white)
 
@@ -31,6 +36,7 @@ I apply the same mindset to Python development: I focus on building **robust, pr
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
+![asyncpg](https://img.shields.io/badge/asyncpg-000000?logo=postgresql&logoColor=white)
 
 **DevOps & Tools:**
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
