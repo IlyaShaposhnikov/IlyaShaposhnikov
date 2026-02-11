@@ -1,4 +1,4 @@
-🇷🇺 **[На русском / Russian Version](README.ru.md)**
+🇷🇺 **[Russian Version / На русском](README.ru.md)**
 
 # 👋 Hi, I'm Ilya Shaposhnikov
 
@@ -206,4 +206,4 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 
 📚 **[Full Project List](README.full.md)**
 
-🇷🇺 **[На русском / Russian Version](README.ru.md)**
+🇷🇺 **[Russian Version / На русском](README.ru.md)**
