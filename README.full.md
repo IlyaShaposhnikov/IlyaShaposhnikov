@@ -166,7 +166,7 @@
 *   **Automatic Donation Distribution:** Implemented FIFO algorithm for distributing incoming donations among open projects, ensuring transparency and predictability.
 *   **Comprehensive Authentication System:** Using JWT tokens to protect API endpoints, with support for superusers and a role model.
 *   **Professional Project Structure:** Clear separation into modules (API, CRUD, models, schemas, services) using asynchronous SQLAlchemy 2.0.
-*   **Full Documentation:** Automatic generation of interactive OpenAPI documentation (Swagger UI and ReDoc) at `/docs` and `/redoc`.
+*   **Full Documentation:** Auto-generated interactive OpenAPI documentation (Swagger UI and ReDoc) at `/docs` and `/redoc`.
 *   **Development Ready:** Configured migration system via Alembic, configuration via environment variables, data validation via Pydantic.
 
 **🛠 Tech Stack:**
