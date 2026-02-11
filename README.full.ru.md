@@ -1,4 +1,4 @@
-🇬🇧 **[На английском / English Version](README.full.md)**
+🇬🇧 **[English Version / На английском](README.full.md)**
 
 # 📚 Полный каталог проектов
 
@@ -200,4 +200,4 @@
 
 🔙 **[Ключевые проекты](README.ru.md)**
 
-🇬🇧 **[На английском / English Version](README.full.md)**
+🇬🇧 **[English Version / На английском](README.full.md)**
