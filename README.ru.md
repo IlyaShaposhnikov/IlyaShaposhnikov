@@ -1,4 +1,4 @@
-🇬🇧 **[На английском / English Version](README.md)**
+🇬🇧 **[English Version / На английском](README.md)**
 
 # 👋 Привет, я Илья Шапошников
 
@@ -207,4 +207,4 @@
 
 📚 **[Полный список проектов](README.full.ru.md)**
 
-🇬🇧 **[На английском / English Version](README.md)**
+🇬🇧 **[English Version / На английском](README.md)**
