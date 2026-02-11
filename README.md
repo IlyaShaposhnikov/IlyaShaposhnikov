@@ -77,6 +77,8 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 | **Data Research & Analysis** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
 | **Web Services & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 
+### 📚 [Full Project List](README.full.md)
+
 ### 💰 Wallet REST API [FastAPI, PostgreSQL]
 
 **High-load asynchronous REST API for managing financial balances.** The service ensures data consistency during concurrent deposit/withdrawal operations, implementing an e-wallet pattern.
@@ -195,5 +197,7 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 ![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/shortlink_generator)
+
+### 📚 [Full Project List](README.full.md)
 
 🇷🇺 [На русском / Russian Version](README.ru.md)
