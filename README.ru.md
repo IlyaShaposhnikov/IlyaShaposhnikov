@@ -1,4 +1,4 @@
-🌍 [English Version](README.md)
+🇬🇧 **[На английском / English Version](README.md)**
 
 # 👋 Привет, я Илья Шапошников
 
@@ -77,6 +77,8 @@
 | **Исследование & Анализ данных** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Сравнительный анализ 5 методов предобработки текста (стемминг, лемматизация и др.) для задачи классификации новостей. Включает оценку по точности, скорости и размеру словаря. |
 | **Исследование & Анализ данных** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Сравнительный анализ TF-IDF: реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
 | **Веб-сервисы & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
+
+📚 **[Полный список проектов](README.full.ru.md)**
 
 ### 💰 Wallet REST API [FastAPI, PostgreSQL]
 
@@ -197,4 +199,6 @@
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/shortlink_generator)
 
-🌍 [English Version](README.md)
+📚 **[Полный список проектов](README.full.ru.md)**
+
+🇬🇧 **[На английском / English Version](README.md)**
