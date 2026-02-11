@@ -2,7 +2,7 @@
 
 # 📚 Full Project List
 
-🔙 **[Key Projects](README.md)**
+🔙 **[Key Projects](README.md#-key-projects)**
 
 ## 🚀 All Projects
 
