@@ -4,9 +4,11 @@
 
 **Python Developer** building backend services and integrating machine learning (**ML**) and **NLP** to solve real-world problems. I approach development as solving business problems: I value clean, maintainable architecture and measurable impact.
 
-For **over 12 years**, I optimized complex processes at an international corporation, where I initiated and implemented IT solutions (from reporting automation to enterprise CAT system deployment). This experience shaped my **systems thinking, process analysis skills, and ability to drive projects to production** (tangible results: 90% reduction in manual effort, 70% increase in operational speed).
+I focus on building **robust, production-ready end-to-end solutions** — from designing architecture and business logic to containerization, CI/CD setup, and deployment. Below are projects I architected and implemented: from high-load APIs and modern AI/ML solutions to comprehensive web services.
 
-I apply the same mindset to Python development: I focus on building **robust, production-ready end-to-end solutions** — from designing architecture and business logic to containerization, CI/CD setup, and deployment. Below are projects I architected and implemented: from high-load APIs and modern AI/ML solutions to comprehensive web services.
+## Previous Experience
+
+For **over 12 years**, I optimized complex processes at an international corporation, where I initiated and implemented IT solutions (from reporting automation to enterprise CAT system deployment). This experience shaped my **systems thinking, process analysis skills, and ability to drive projects to production** (tangible results: 90% reduction in manual effort, 70% increase in operational speed).
 
 ## 🛠 Technology Stack
 
