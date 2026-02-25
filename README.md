@@ -74,6 +74,8 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 
 **📱 Telegram:** [@iliashaposhnikov](https://t.me/iliashaposhnikov)
 
+**💼 LinkedIn:** [@iliashaposhnikov](https://linkedin.com/in/iliashaposhnikov)
+
 ## 🚀 Key Projects
 
 | Category | Project | Key Technologies | Core Concept & Challenges |
