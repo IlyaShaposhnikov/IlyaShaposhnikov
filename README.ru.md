@@ -84,6 +84,7 @@
 | **Production Backend** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Асинхронное API для финансовых операций с гарантией консистентности данных при конкурентных запросах (транзакции, блокировки). |
 | **AI & Интеллектуальные системы** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B). |
 | **Машинное обучение & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актёры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
+| **Машинное обучение & NLP** | [🔬 Embedding Playground](#-embedding-playground-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для глубокого семантического анализа эмбеддингов (векторных представлений) слов с визуализацией аналогий через векторные стрелки, визуализацией семантических кластеров (PCA/t-SNE) и оценкой качества моделей на тесте аналогий через интуитивную командную оболочку. |
 | **Исследование & Анализ данных** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Сравнительный анализ 5 методов предобработки текста (стемминг, лемматизация и др.) для задачи классификации новостей. Включает оценку по точности, скорости и размеру словаря. |
 | **Исследование & Анализ данных** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Сравнительный анализ TF-IDF: реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
 | **Веб-сервисы & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
@@ -148,6 +149,27 @@
 ![Telegram Bot API](https://img.shields.io/badge/Telegram_Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
+
+
+### 🔬 Embedding Playground [ML, NLP, Visualization]
+
+**Интерактивный исследовательский инструмент для глубокого семантического анализа эмбеддингов (векторных представлений) слов с визуализацией семантических отношений через векторные стрелки.** Позволяет интуитивно исследовать семантическую структуру моделей Word2Vec и GloVe через визуализацию аналогий с направленными стрелками, визуализацию семантических кластеров и оценку качества моделей.
+
+**✨ Ключевые особенности:**
+*   **Визуализация аналогий через векторные стрелки:** Уникальные 2D-графики, отображающие семантические отношения как направленные стрелки (`man → king` и `result → woman`), наглядно демонстрирующие параллелизм в векторной арифметике (`king - man + woman = queen`).
+*   **Визуализация семантических кластеров:** Автоматическое 2D-отображение опорных слов и их ближайших соседей с цветовой кодировкой кластеров с использованием PCA (глобальная структура) и t-SNE (локальные окрестности).
+*   **Оценка качества моделей:** Тестирование на наборе Google Analogy Test Set (19 544 задачи) с разбивкой по семантическим/синтаксическим категориям и анализом покрытия словаря.
+*   **Исследование без программирования:** Интуитивная командная оболочка с контекстной справкой и демо-режимом — для глубокого семантического анализа не требуется писать код.
+*   **Оптимизированное управление моделями:** Автоматическая загрузка с проверкой целостности, использованием резервных зеркал и бинарным кэшированием для мгновенной загрузки при повторных запусках.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Gensim](https://img.shields.io/badge/Gensim-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/embedding-playground)
 
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
