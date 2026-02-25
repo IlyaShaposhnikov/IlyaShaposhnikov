@@ -74,6 +74,8 @@
 
 **📱 Telegram:** [@iliashaposhnikov](https://t.me/iliashaposhnikov)
 
+**💼 LinkedIn:** [@iliashaposhnikov](https://linkedin.com/in/iliashaposhnikov)
+
 
 ## 🚀 Ключевые проекты
 
