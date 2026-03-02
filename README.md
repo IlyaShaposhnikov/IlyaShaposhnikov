@@ -168,7 +168,7 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/embedding-playground)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/embedding-visualizer)
 
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
