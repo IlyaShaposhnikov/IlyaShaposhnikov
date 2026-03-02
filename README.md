@@ -83,7 +83,7 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 | **Production Backend** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
 | **AI & Intelligent Systems** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B). |
 | **Machine Learning (ML) & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
-| **Machine Learning (ML) & NLP** | [🔬 Embedding Playground](#-embedding-playground-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. |
+| **Machine Learning (ML) & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. |
 | **Data Research & Analysis** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comparative analysis of 5 text preprocessing methods (stemming, lemmatization, etc.) for news classification. Includes evaluation by accuracy, speed, and vocabulary size. |
 | **Data Research & Analysis** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
 | **Web Services & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
@@ -150,7 +150,7 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
 
 
-### 🔬 Embedding Playground [ML, NLP, Visualization]
+### 🔬 Embedding Visualizer [ML, NLP, Visualization]
 
 **Interactive research toolkit for deep semantic analysis of word embeddings with vector-arrow visualizations of semantic relationships.** Enables intuitive exploration of semantic structure in Word2Vec and GloVe models through analogy visualization with directional arrows, semantic cluster projection, and quality evaluation.
 
