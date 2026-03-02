@@ -84,7 +84,7 @@
 | **Production Backend** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Асинхронное API для финансовых операций с гарантией консистентности данных при конкурентных запросах (транзакции, блокировки). |
 | **AI & Интеллектуальные системы** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B). |
 | **Машинное обучение & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актёры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
-| **Машинное обучение & NLP** | [🔬 Embedding Playground](#-embedding-playground-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для глубокого семантического анализа эмбеддингов (векторных представлений) слов с визуализацией аналогий через векторные стрелки, визуализацией семантических кластеров (PCA/t-SNE) и оценкой качества моделей на тесте аналогий через интуитивную командную оболочку. |
+| **Машинное обучение & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для глубокого семантического анализа эмбеддингов (векторных представлений) слов с визуализацией аналогий через векторные стрелки, визуализацией семантических кластеров (PCA/t-SNE) и оценкой качества моделей на тесте аналогий через интуитивную командную оболочку. |
 | **Исследование & Анализ данных** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Сравнительный анализ 5 методов предобработки текста (стемминг, лемматизация и др.) для задачи классификации новостей. Включает оценку по точности, скорости и размеру словаря. |
 | **Исследование & Анализ данных** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Сравнительный анализ TF-IDF: реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
 | **Веб-сервисы & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
@@ -151,7 +151,7 @@
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
 
 
-### 🔬 Embedding Playground [ML, NLP, Visualization]
+### 🔬 Embedding Visualizer [ML, NLP, Visualization]
 
 **Интерактивный исследовательский инструмент для глубокого семантического анализа эмбеддингов (векторных представлений) слов с визуализацией семантических отношений через векторные стрелки.** Позволяет интуитивно исследовать семантическую структуру моделей Word2Vec и GloVe через визуализацию аналогий с направленными стрелками, визуализацию семантических кластеров и оценку качества моделей.
 
