@@ -11,7 +11,7 @@
 | **Production Backend** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
 | **AI & Intelligent Systems** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B). |
 | **Machine Learning (ML) & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
-| **Machine Learning (ML) & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. |
+| **Machine Learning (ML) & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. Built with a robust, modular architecture. |
 | **Data Research & Analysis** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comparative analysis of 5 text preprocessing methods (stemming, lemmatization, etc.) for news classification. Includes evaluation by accuracy, speed, and vocabulary size. |
 | **Data Research & Analysis** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
 | **Web Services & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
@@ -81,14 +81,16 @@
 
 ### 🔬 Embedding Visualizer [ML, NLP, Visualization]
 
-**Interactive research toolkit for deep semantic analysis of word embeddings with vector-arrow visualizations of semantic relationships.** Enables intuitive exploration of semantic structure in Word2Vec and GloVe models through analogy visualization with directional arrows, semantic cluster projection, and quality evaluation.
+**Interactive research toolkit for deep semantic analysis of word embeddings with vector-arrow visualizations of semantic relationships.** Built with a robust, modular architecture for enhanced stability and maintainability. Enables intuitive exploration of semantic structure in Word2Vec and GloVe models through analogy visualization with directional arrows, semantic cluster projection, and quality evaluation.
 
 **✨ Key Features:**
-*   **Vector-Arrow Analogy Visualization:** Unique 2D plots showing semantic relationships as directional arrows (`w2 → w1` and `result → w3`), visually demonstrating parallelism in vector arithmetic (`king - man + woman = queen`).
 *   **Semantic Cluster Projection:** Automatic 2D mapping of seed words and their nearest neighbors with color-coded clusters using PCA (global structure) and t-SNE (local neighborhoods).
+*   **Vector-Arrow Analogy Visualization:** Unique 2D plots showing semantic relationships as directional arrows (`w2 → w1` and `result → w3`), visually demonstrating parallelism in vector arithmetic (`king - man + woman = queen`).
+*   **Smart Model Management:** Automatic download with integrity checks, mirror fallback, and binary caching for instant subsequent loads.
+*   **Lazy Model Loading**: Models load on demand via Model Manager, improving startup speed and memory efficiency.
+*   **Robust Modular Architecture**: Separated concerns across `services`, `presentation`, `visualization`, and `data` layers for clean, testable code. Centralized configuration and enhanced logging.
 *   **Quality Evaluation:** Testing on Google Analogy Test Set (19,544 questions) with accuracy breakdown by semantic/syntactic categories and vocabulary coverage analysis.
 *   **Zero-Code Exploration:** Intuitive command-line interface with contextual help, demo mode, and persistent session — no programming required for deep semantic analysis.
-*   **Smart Model Management:** Automatic download with integrity checks, mirror fallback, and binary caching for instant subsequent loads.
 
 **🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
