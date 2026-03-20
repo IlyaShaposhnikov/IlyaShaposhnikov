@@ -12,7 +12,7 @@
 | **AI & Intelligent Systems** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B). |
 | **Machine Learning (ML) & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
 | **Machine Learning (ML) & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. Built with a robust, modular architecture. |
-| **Data Research & Analysis** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comparative analysis of 5 text preprocessing methods (stemming, lemmatization, etc.) for news classification. Includes evaluation by accuracy, speed, and vocabulary size. |
+| **Data Research & Analysis** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comprehensive comparative analysis of 5 text preprocessing methods (basic, stop-word removal, lemmatization, stemming, simple tokenization) for news classification using CountVectorizer. Includes evaluation by accuracy, speed, and vocabulary size. Built with a modular architecture for maintainable and readable code. |
 | **Data Research & Analysis** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
 | **Web Services & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 | **Web Services & API** | [🍳 Recipe Network](#-recipe-network-django-rest-framework) | Django, Django REST Framework, Djoser, PostgreSQL, Docker | Web application for publishing cooking recipes with subscriptions, favorites, and shopping lists. Backend (API) and containerization implemented. |
@@ -104,13 +104,14 @@
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
 
-**Research project comparing the effectiveness of 5 text preprocessing methods** (stemming, lemmatization, stop-word removal, etc.) when vectorizing with `CountVectorizer` on the BBC News dataset.
+**Research project comparing the effectiveness of 5 text preprocessing methods** (basic, stop-word removal, lemmatization, stemming, simple tokenization) when vectorizing with `CountVectorizer` on the BBC News dataset. **Built with a modular architecture** for enhanced readability and maintainability.
 
 **✨ Key Features:**
 *   **Comparative Analysis:** Direct comparison of 5 text processing approaches by accuracy, vocabulary size, execution time, and matrix density.
 *   **Deep NLP Focus:** Implementation and evaluation of linguistic methods (lemmatization, stemming).
 *   **Clear Conclusions:** Identification of the optimal method that achieved a balance of accuracy and speed.
-*   **Full Visualization:** Auto-generated comparative charts and tables.
+*   **Full Visualization & Reporting:** Auto-generated comparative charts, tables, and detailed CSV reports.
+*   **Modular Design**: Code structured into dedicated modules (`methods`, `utils`) following DRY principles.
 
 **🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
