@@ -86,6 +86,7 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 | **Machine Learning (ML) & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. Built with a robust, modular architecture. |
 | **Data Research & Analysis** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comprehensive comparative analysis of 5 text preprocessing methods (basic, stop-word removal, lemmatization, stemming, simple tokenization) for news classification using CountVectorizer. Includes evaluation by accuracy, speed, and vocabulary size. Built with a modular architecture for maintainable and readable code. |
 | **Data Research & Analysis** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
+| **Data Research & Analysis** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas) | scikit-learn, pandas, matplotlib, EDA | Dual predictive models for agricultural economics: regression for price forecasting and classification for color prediction with interpretable outputs and production-ready structure. |
 | **Web Services & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 
 📚 **[Full Project List](README.full.md)**
@@ -212,6 +213,28 @@ I'm looking for a **Python Developer** role with a focus on **ML**/**NLP** proje
 ![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/text-keyword-extractor)
+
+
+### 🔮 Pumpkin Price & Color Forecast [scikit-learn, pandas, EDA]
+
+**Dual predictive modeling project for US agricultural market data: regression for pumpkin price forecasting and classification for color prediction, with emphasis on interpretability and production-ready code.**
+
+**✨ Key Features:**
+*   **Interpretable Regression Models:** From simple linear (`y = kx + b`) to multivariate polynomial models achieving **R² = 0.969**, with clear formulas and performance metrics (MSE, RMSE).
+*   **High-Accuracy Classification:** Logistic regression classifier predicting pumpkin color with **F1 = 0.94** and **AUC = 0.975**, including threshold optimization and confusion matrix analysis.
+*   **Comprehensive EDA Pipeline:** Automated exploratory analysis with visualizations of seasonality, correlations, and feature distributions saved to structured output directories.
+*   **Production-Ready Architecture:** Modular code structure (`src/`, `scripts/`, `utils/`), reusable components, and demo script for end-to-end pipeline execution.
+*   **Practical Agricultural Economics Focus:** Real-world dataset (US pumpkin market) with actionable insights on price drivers (variety, location, packaging) and color predictors.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/pumpkin-price-color-forecast)
 
 
 ### 🔗 URL Shortener Service [Flask, REST API]
