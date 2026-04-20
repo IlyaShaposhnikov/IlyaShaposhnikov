@@ -87,6 +87,7 @@
 | **Машинное обучение & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для глубокого семантического анализа эмбеддингов (векторных представлений) слов с визуализацией аналогий через векторные стрелки, визуализацией семантических кластеров (PCA/t-SNE) и оценкой качества моделей на тесте аналогий через интуитивную командную оболочку. Разработан с использованием модульной архитектуры. |
 | **Исследование & Анализ данных** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Комплексный сравнительный анализ 5 методов предобработки текста (базовый, удаление стоп-слов, лемматизация, стемминг, простая токенизация) для задачи классификации новостей с использованием CountVectorizer. Включает оценку по точности, скорости и размеру словаря. Разработан с применением модульной архитектуры для обеспечения удобства сопровождения и читаемости кода. |
 | **Исследование & Анализ данных** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Сравнительный анализ TF-IDF: реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
+| **Исследование & Анализ данных** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas) | scikit-learn, pandas, matplotlib, EDA | Две прогнозные модели для сельскохозяйственной экономики: регрессия для прогноза цены и классификация для определения цвета с интерпретируемыми результатами и структурой, готовой к использованию. |
 | **Веб-сервисы & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
 
 📚 **[Полный список проектов](README.full.ru.md)**
@@ -214,6 +215,28 @@
 ![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/text-keyword-extractor)
+
+
+### 🔮 Pumpkin Price & Color Forecast [scikit-learn, pandas, EDA]
+
+**Проект двойного прогнозного моделирования данных рынка тыкв в США: регрессия для прогноза цены и классификация для определения цвета, с акцентом на интерпретируемость и структуру кода, готовую к использованию.**
+
+**✨ Ключевые особенности:**
+*   **Интерпретируемые регрессионные модели:** От простой линейной (`y = kx + b`) до многомерных полиномиальных моделей с **R² = 0.969**, с понятными формулами и метриками качества (MSE, RMSE).
+*   **Высокоточная классификация:** Классификатор на логистической регрессии для прогнозирования цвета тыквы с **F1 = 0.94** и **AUC = 0.975**, включая оптимизацию порога и анализ матрицы ошибок.
+*   **Комплексный EDA-пайплайн:** Автоматизированный разведочный анализ с визуализацией сезонности, корреляций и распределений признаков, сохраняемый в структурированные директории.
+*   **Архитектура, готовая к использованию:** Модульная структура кода (`src/`, `scripts/`, `utils/`), переиспользуемые компоненты и демо-скрипт для запуска полного пайплайна.
+*   **Практическая фокусировка на сельскохозяйственной экономике:** Реальный датасет (рынок тыкв США) с практическими выводами о факторах цены (сорт, локация, упаковка) и предикторах цвета.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/pumpkin-price-color-forecast)
 
 
 ### 🔗 URL Shortener Service [Flask, REST API]
