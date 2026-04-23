@@ -12,6 +12,7 @@
 | **AI & Интеллектуальные системы** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B). |
 | **Машинное обучение & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актёры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
 | **Машинное обучение & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для глубокого семантического анализа эмбеддингов (векторных представлений) слов с визуализацией аналогий через векторные стрелки, визуализацией семантических кластеров (PCA/t-SNE) и оценкой качества моделей на тесте аналогий через интуитивную командную оболочку. Разработан с использованием модульной архитектуры. |
+| **Машинное обучение & NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Модульный пайплайн для бинарной классификации SMS с использованием Naive Bayes/Logistic Regression, CLI-интерфейсом, структурированным логированием, сохранением артефактов и интерпретируемостью через матрицу ошибок и облака слов. |
 | **Исследование & Анализ данных** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Комплексный сравнительный анализ 5 методов предобработки текста (базовый, удаление стоп-слов, лемматизация, стемминг, простая токенизация) для задачи классификации новостей с использованием CountVectorizer. Включает оценку по точности, скорости и размеру словаря. Разработан с применением модульной архитектуры для обеспечения удобства сопровождения и читаемости кода. |
 | **Исследование & Анализ данных** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Сравнительный анализ TF-IDF: реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
 | **Исследование & Анализ данных** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas) | scikit-learn, pandas, matplotlib, EDA | Две прогнозные модели для сельскохозяйственной экономики: регрессия для прогноза цены и классификация для определения цвета с интерпретируемыми результатами и готовой к использованию в рабочей среде структурой кода. |
@@ -101,6 +102,30 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/embedding-visualizer)
+
+
+### 🚫 SMS Spam Detector [ML, NLP, CLI]
+
+**Модульный пайплайн для бинарной классификации SMS с использованием векторизаторов и вероятностных моделей scikit-learn**, разработанный с применением паттернов, готовых к использованию в рабочей среде, и интуитивным интерфейсом командной строки.
+
+**✨ Ключевые особенности:**
+*   **Гибкий выбор модели**: Поддержка **Наивного Байеса** (быстрый базовый вариант) и **Логистической регрессии** (более высокая точность) через аргумент `--model` в CLI.
+*   **Адаптивная векторизация**: Переключение между **CountVectorizer** и **TfidfVectorizer** с настраиваемыми n-граммами, максимальным количеством признаков и обработкой стоп-слов.
+*   **Комплексная оценка**: Автоматический расчёт accuracy, F1, precision, recall и ROC-AUC с экспортом в JSON для отслеживания экспериментов.
+*   **Инструменты интерпретируемости**: Визуализация матрицы ошибок через встроенный `ConfusionMatrixDisplay` из sklearn, облака слов для анализа спам/легитимных сообщений и просмотр ошибочно классифицированных примеров с вероятностями.
+*   **CLI-управляемый пайплайн**: Запуск полного цикла через `python scripts/train.py` с валидацией аргументов через argparse, воспроизводимость через `--random-state` и опциональная генерация графиков.
+*   **Паттерны, готовые к использованию в рабочей среде**: Структурированное логирование (вывод в консоль и сохранение в файл), корректная обработка ошибок с кодами выхода, сохранение артефактов (модели, метрики, графики) с таймстемпами.
+*   **Модульная архитектура**: Чёткое разделение ответственности между модулями `data`, `features`, `models`, `evaluation` и `visualization` для поддерживаемого и тестируемого кода.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/sms-spam-detector)
 
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
