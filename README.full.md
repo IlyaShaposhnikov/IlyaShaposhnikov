@@ -12,6 +12,7 @@
 | **AI & Intelligent Systems** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B). |
 | **Machine Learning (ML) & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
 | **Machine Learning (ML) & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. Built with a robust, modular architecture. |
+| **Machine Learning (ML) & NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Modular pipeline for binary SMS classification using Naive Bayes/Logistic Regression, featuring CLI interface, structured logging, artifact persistence, and interpretability via confusion matrices and word clouds. |
 | **Data Research & Analysis** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comprehensive comparative analysis of 5 text preprocessing methods (basic, stop-word removal, lemmatization, stemming, simple tokenization) for news classification using CountVectorizer. Includes evaluation by accuracy, speed, and vocabulary size. Built with a modular architecture for maintainable and readable code. |
 | **Data Research & Analysis** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
 | **Data Research & Analysis** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas) | scikit-learn, pandas, matplotlib, EDA | Dual predictive models for agricultural economics: regression for price forecasting and classification for color prediction with interpretable outputs and production-ready structure. |
@@ -101,6 +102,30 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/embedding-visualizer)
+
+
+### 🚫 SMS Spam Detector [ML, NLP, CLI]
+
+**Modular pipeline for binary SMS classification using scikit-learn vectorizers and probabilistic models**, designed with production-ready patterns and an intuitive command-line interface.
+
+**✨ Key Features:**
+*   **Flexible Model Selection**: Support for **Naive Bayes** (fast baseline) and **Logistic Regression** (higher accuracy) via `--model` CLI argument.
+*   **Adaptive Vectorization**: Switch between **CountVectorizer** and **TfidfVectorizer** with configurable n-grams, max features, and stop-word handling.
+*   **Comprehensive Evaluation**: Automated calculation of accuracy, F1, precision, recall, and ROC-AUC with JSON export for experiment tracking.
+*   **Interpretability Tools**: Confusion matrix visualization via sklearn's `ConfusionMatrixDisplay`, word clouds for spam/ham analysis, and misclassification inspection with probability scores.
+*   **CLI-Driven Workflow**: Full pipeline execution via `python scripts/train.py` with argparse validation, reproducibility via `--random-state`, and optional plot generation.
+*   **Production Patterns**: Structured logging to console + file, graceful error handling with exit codes, and artifact persistence (models, metrics, plots) with timestamps.
+*   **Modular Architecture**: Clean separation of concerns across `data`, `features`, `models`, `evaluation`, and `visualization` modules for maintainable, testable code.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/sms-spam-detector)
 
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
