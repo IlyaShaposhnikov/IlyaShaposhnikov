@@ -12,7 +12,7 @@
 
 ## 🛠 Технологический стек
 
-**Backend & Frameworks:**
+**Backend и фреймворки:**
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white)
 ![Django REST Framework](https://img.shields.io/badge/DRF-092E20?logo=django&logoColor=white)
@@ -25,7 +25,11 @@
 ![Alembic](https://img.shields.io/badge/Alembic-000000?logo=alembic&logoColor=white)
 ![Pydantic](https://img.shields.io/badge/Pydantic-92000?logo=pydantic&logoColor=white)
 
-**Data Science & Machine Learning:**
+**API и безопасность:**
+![REST API](https://img.shields.io/badge/REST_API-FF6C37?logo=postman&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white)
+
+**Data Science и машинное обучение:**
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
@@ -35,14 +39,15 @@
 ![Ollama](https://img.shields.io/badge/Ollama-3BB143?logo=ollama&logoColor=white)
 ![SHAP](https://img.shields.io/badge/SHAP-FF8C00?logo=python&logoColor=white)
 ![SciPy](https://img.shields.io/badge/SciPy-654FF0?logo=scipy&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 
-**Databases:**
+**Базы данных:**
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
 ![asyncpg](https://img.shields.io/badge/asyncpg-000000?logo=postgresql&logoColor=white)
 
-**DevOps & Tools:**
+**DevOps, тестирование и инструменты:**
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
@@ -51,15 +56,10 @@
 ![Gunicorn](https://img.shields.io/badge/Gunicorn-499848?logo=gunicorn&logoColor=white)
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnu-bash&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white)
-
-**Testing:**
 ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?logo=pytest&logoColor=white)
 
-**Frontend & Other:**
+**Frontend и утилиты:**
 ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white)
-![REST API](https://img.shields.io/badge/REST_API-FF6C37?logo=postman&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 
 ## 🗣️ [Естественные] языки
 *   🇷🇺 **Русский:** Родной
