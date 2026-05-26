@@ -13,6 +13,7 @@
 | **Machine Learning (ML) & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
 | **Machine Learning (ML) & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. Built with a robust, modular architecture. |
 | **Machine Learning (ML) & NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Modular pipeline for binary SMS classification using Naive Bayes/Logistic Regression, featuring CLI interface, structured logging, artifact persistence, and interpretability via confusion matrices and word clouds. |
+| **Machine Learning (ML) & NLP** | [✈️ Airline Sentiment Analysis Pipeline](#-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, TF-IDF, SHAP, pytest | End-to-end sentiment classification pipeline for airline tweets with confidence-weighted training, explainable predictions (SHAP), production REST API, interactive Streamlit dashboard, and CI/CD with >90% test coverage. |
 | **Data Research & Analysis** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comprehensive comparative analysis of 5 text preprocessing methods (basic, stop-word removal, lemmatization, stemming, simple tokenization) for news classification using CountVectorizer. Includes evaluation by accuracy, speed, and vocabulary size. Built with a modular architecture for maintainable and readable code. |
 | **Data Research & Analysis** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
 | **Data Research & Analysis** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Dual predictive models for agricultural economics: regression for price forecasting and classification for color prediction with interpretable outputs and production-ready structure. |
@@ -126,6 +127,31 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/sms-spam-detector)
+
+
+### ✈️ Airline Sentiment Analysis Pipeline [ML, NLP, FastAPI, Streamlit]
+
+**Production-ready end-to-end ML pipeline for airline tweet sentiment classification** with confidence-aware training, explainable AI, async REST API, and interactive dashboard.
+
+**✨ Key Features:**
+*   **Confidence-Aware Training**: Sample weighting based on annotation confidence scores for more robust model learning.
+*   **Explainable Predictions**: Per-prediction insights via top contributing words and optional SHAP value visualizations.
+*   **Production REST API**: Async-safe FastAPI service with Pydantic v2 validation, thread-safe model serving, CORS support, and timeout handling.
+*   **Interactive Dashboard**: Streamlit UI for single/batch predictions with CSV/JSON export, real-time health checks, and session persistence.
+*   **Comprehensive Testing**: >90% coverage with unit/integration tests, GitHub Actions CI, security auditing via pip-audit.
+*   **Modular Architecture**: Clean separation of data loading, preprocessing, modeling, API, and dashboard layers with centralized config management.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis)
 
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
