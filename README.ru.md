@@ -33,6 +33,8 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?logo=python&logoColor=white)
 ![NLTK](https://img.shields.io/badge/NLTK-3BB143?logo=python&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-3BB143?logo=ollama&logoColor=white)
+![SHAP](https://img.shields.io/badge/SHAP-FF8C00?logo=python&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-654FF0?logo=scipy&logoColor=white)
 
 **Databases:**
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
@@ -57,6 +59,7 @@
 ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white)
 ![REST API](https://img.shields.io/badge/REST_API-FF6C37?logo=postman&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 
 ## 🗣️ [Естественные] языки
 *   🇷🇺 **Русский:** Родной
