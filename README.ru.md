@@ -86,6 +86,7 @@
 | **Машинное обучение & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актёры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
 | **Машинное обучение & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для глубокого семантического анализа эмбеддингов (векторных представлений) слов с визуализацией аналогий через векторные стрелки, визуализацией семантических кластеров (PCA/t-SNE) и оценкой качества моделей на тесте аналогий через интуитивную командную оболочку. Разработан с использованием модульной архитектуры. |
 | **Машинное обучение & NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Модульный пайплайн для бинарной классификации SMS с использованием Naive Bayes/Logistic Regression, CLI-интерфейсом, структурированным логированием, сохранением артефактов и интерпретируемостью через матрицу ошибок и облака слов. |
+| **Машинное обучение & NLP** | [✈️ Airline Sentiment Analysis Pipeline](#-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, TF-IDF, SHAP, pytest | Сквозной пайплайн классификации тональности твитов об авиакомпаниях с обучением с учетом уверенности разметчиков, объяснимыми предсказаниями (SHAP), готовым к использованию в рабочей среде REST API, интерактивной панелью на Streamlit и CI с покрытием тестами >90%. |
 | **Исследование & Анализ данных** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Комплексный сравнительный анализ 5 методов предобработки текста (базовый, удаление стоп-слов, лемматизация, стемминг, простая токенизация) для задачи классификации новостей с использованием CountVectorizer. Включает оценку по точности, скорости и размеру словаря. Разработан с применением модульной архитектуры для обеспечения удобства сопровождения и читаемости кода. |
 | **Исследование & Анализ данных** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Сравнительный анализ TF-IDF: реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
 | **Исследование & Анализ данных** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Две прогнозные модели для сельскохозяйственной экономики: регрессия для прогноза цены и классификация для определения цвета с интерпретируемыми результатами и готовой к использованию в рабочей среде структурой кода. |
@@ -198,6 +199,31 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/sms-spam-detector)
+
+
+### ✈️ Airline Sentiment Analysis Pipeline [ML, NLP, FastAPI, Streamlit]
+
+**Готовый к использованию в рабочей среде сквозной ML-пайплайн для классификации тональности твитов об авиакомпаниях** с обучением с учетом уверенности аннотаций, объяснимым ИИ, асинхронным REST API и интерактивной панелью управления.
+
+**✨ Ключевые особенности:**
+*   **Обучение с учетом уверенности**: Взвешивание примеров на основе баллов уверенности разметчиков для более надежного обучения модели.
+*   **Объяснимые предсказания**: Интерпретация отдельных предсказаний через топ-слова с наибольшим вкладом и опциональную визуализацию SHAP-значений.
+*   **Production-ready REST API**: Асинхронно-безопасный сервис на FastAPI с валидацией через Pydantic v2, потокобезопасным обслуживанием модели, поддержкой CORS и обработкой таймаутов.
+*   **Интерактивная панель управления**: Веб-интерфейс на Streamlit для одиночных и пакетных предсказаний с экспортом в CSV/JSON, проверкой здоровья API в реальном времени и сохранением состояния сессии.
+*   **Комплексное тестирование**: Покрытие тестами >90% с юнит- и интеграционными тестами, CI через GitHub Actions, аудит безопасности через pip-audit.
+*   **Модульная архитектура**: Чёткое разделение ответственности между слоями загрузки данных, предобработки, моделирования, API и дашборда с централизованным управлением конфигурацией.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis)
 
 
 ### 🔬 CountVectorizer Comparison Project [NLP]
