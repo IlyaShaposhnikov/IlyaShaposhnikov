@@ -10,6 +10,8 @@
 | :--- | :--- | :--- | :--- |
 | **AI & LLM Systems** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
 | **ML/NLP Pipeline** | [✈️ Airline Sentiment Analysis Pipeline](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, TF-IDF, SHAP, pytest | End-to-end sentiment classification pipeline with confidence-weighted training, explainable predictions (SHAP), production REST API, interactive Streamlit dashboard, and CI/CD with >90% test coverage. |
+| **ML/NLP Research** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
+| **NLP Application** | [🌍 Polyglot Extractive Summarizer](#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
 | **ML & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. Built with a robust, modular architecture. |
 | **ML & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
 | **ML & NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Modular pipeline for binary SMS classification using Naive Bayes/Logistic Regression, featuring CLI interface, structured logging, artifact persistence, and interpretability via confusion matrices and word clouds. |
@@ -65,6 +67,53 @@
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis)
+
+
+### 🔎 TopicLens [ML, NLP, Topic Modeling]
+
+**Comparative topic-modeling study: LDA, NMF and LSA fitted on the same corpus of 20K arXiv abstracts (2018–2026) and compared on coherence, topic diversity and agreement with real category labels — not on how plausible their top words look.** Comes with an interactive Streamlit app and a live demo that refreshes itself every month.
+
+**✨ Key Features:**
+*   **Rigorous Model Comparison:** NPMI and UMass coherence (implemented directly, without gensim), topic diversity, pairwise overlap, and agreement with arXiv categories (NMI, ARI, purity). NMF wins every quality metric (NPMI 0.196, purity 0.816); LSA's near-random purity is analyzed as an informative failure, and LSA is repurposed as a similarity search engine.
+*   **Cross-Model Topic Matching:** Topic vectors matched with the Hungarian algorithm — LDA and NMF independently recovered the same structure (mean similarity 0.68, up to 0.91 for individual topics).
+*   **Topic Dynamics over 8 Years:** Quarterly topic shares show the LLM topic growing from 4% to 25% of the corpus with a break in 2023 — a shift in research focus, not in volume, confirmed independently of the models.
+*   **Measurement-Driven Decisions:** Every parameter chosen by experiment: topic-count sweep with seed-noise estimation, vocabulary capping that improved coherence and purity, data-driven domain stopwords, LDA convergence vs. fit-time trade-off.
+*   **Resilient Data Pipeline:** arXiv API client with resumable checkpoints, dedicated HTTP 429 handling with `Retry-After`, self-invalidating parquet cache; bring your own data via CSV.
+*   **Clean Architecture:** One `TopicModel` contract for three algorithms, a model bundle that keeps training and inference preprocessing identical, pydantic-validated YAML config with environment overrides.
+*   **Testing & Automation:** 280+ network-free tests, CI on Python 3.11/3.12 with linting and dependency audit, and a scheduled workflow that fetches new months, retrains and updates the demo only after the tests pass.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/topic-lens) · [**🚀 Live Demo**](https://topic-lens.streamlit.app/)
+
+
+### 🌍 Polyglot Extractive Summarizer [NLP, TextRank, Streamlit]
+
+**Lightweight multilingual extractive summarization tool powered by the TextRank algorithm.** Summarizes Wikipedia articles (by URL or title) and local `.txt` files, with a web UI and a command-line interface.
+
+**✨ Key Features:**
+*   **Multilingual Support:** English, Russian, German, French and Spanish out of the box; a new language is added via a single mapping plus the matching NLTK resources.
+*   **Dual Input Sources:** Clean plain text fetched from Wikipedia via the MediaWiki API, or uploaded UTF-8 `.txt` files.
+*   **Flexible Length Control:** Summary size set as an absolute number of sentences or as a share of the original text.
+*   **Original Order Preservation:** Extracted sentences are restored to their source order, so the summary reads naturally.
+*   **Dual Interface:** Interactive Streamlit web app (deployed as a live demo) and a CLI for scripted use.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![sumy](https://img.shields.io/badge/sumy_%28TextRank%29-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Wikipedia API](https://img.shields.io/badge/Wikipedia_API-000000?style=for-the-badge&logo=wikipedia&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/polyglot-extractive-summarizer) · [**🚀 Live Demo**](https://polyglot-extractive-summarizer.streamlit.app/)
 
 
 ### 🔬 Embedding Visualizer [ML, NLP, Visualization]
