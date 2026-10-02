@@ -4,7 +4,7 @@
 
 **ML/NLP/LLM-инженер**, создающий _production-ready_ системы машинного обучения и интеллектуальные приложения для работы с языком. Я сочетаю **лингвистическое образование** с сильной инженерной базой, чтобы разрабатывать работающие промышленные решения.
 
-**Моя специализация** — **надёжные ML-пайплайны полного цикла**: от предобработки текста и обучения моделей до объяснимого ИИ (SHAP), контейнеризации, CI/CD и деплоя. Ниже — проекты, которые я спроектировал и реализовал: от аналитических ботов на локальных LLM и инструментов семантического поиска до end-to-end пайплайнов классификации с покрытием тестами >90%.
+**Моя специализация** — **надёжные ML-пайплайны полного цикла**: от предобработки текста и обучения моделей до строгой оценки качества, объяснимого ИИ (SHAP), контейнеризации, CI/CD и деплоя. Ниже — проекты, которые я спроектировал и реализовал: аналитический бот на локальной LLM, сравнительное исследование **тематического моделирования** (LDA/NMF/LSA) на 20 тыс. аннотаций arXiv, мультиязычный **экстрактивный суммаризатор**, семантический анализ эмбеддингов и end-to-end пайплайны классификации с покрытием тестами >90%. Часть из них доступна как **демо**.
 
 ## Почему NLP и ML?
 
@@ -16,8 +16,8 @@
 
 | Категория | Технологии |
 |-----------|------------|
-| **ML, NLP и LLM** | ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white) ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white) ![Gensim](https://img.shields.io/badge/Gensim-3BB143?logo=python&logoColor=white) ![NLTK](https://img.shields.io/badge/NLTK-3BB143?logo=python&logoColor=white) ![Ollama](https://img.shields.io/badge/Ollama-3BB143?logo=ollama&logoColor=white) ![SHAP](https://img.shields.io/badge/SHAP-FF8C00?logo=python&logoColor=white) ![SciPy](https://img.shields.io/badge/SciPy-654FF0?logo=scipy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?logo=python&logoColor=white) ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white) |
-| **Backend и MLOps** | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white) ![Django REST Framework](https://img.shields.io/badge/DRF-092E20?logo=django&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white) ![Aiogram](https://img.shields.io/badge/Aiogram-26A5E4?logo=telegram&logoColor=white) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?logo=python&logoColor=white) ![Alembic](https://img.shields.io/badge/Alembic-000000?logo=alembic&logoColor=white) ![Pydantic](https://img.shields.io/badge/Pydantic-92000?logo=pydantic&logoColor=white) |
+| **ML, NLP и LLM** | ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white) ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white) ![Gensim](https://img.shields.io/badge/Gensim-3BB143?logo=python&logoColor=white) ![NLTK](https://img.shields.io/badge/NLTK-3BB143?logo=python&logoColor=white) ![Ollama](https://img.shields.io/badge/Ollama-3BB143?logo=ollama&logoColor=white) ![SHAP](https://img.shields.io/badge/SHAP-FF8C00?logo=python&logoColor=white) ![SciPy](https://img.shields.io/badge/SciPy-654FF0?logo=scipy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?logo=python&logoColor=white) ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?logo=python&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?logo=plotly&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white) |
+| **Backend и MLOps** | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white) ![Django REST Framework](https://img.shields.io/badge/DRF-092E20?logo=django&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white) ![Aiogram](https://img.shields.io/badge/Aiogram-26A5E4?logo=telegram&logoColor=white) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?logo=python&logoColor=white) ![Alembic](https://img.shields.io/badge/Alembic-000000?logo=alembic&logoColor=white) ![Pydantic](https://img.shields.io/badge/Pydantic-E92063?logo=pydantic&logoColor=white) |
 | **Базы данных** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white) ![asyncpg](https://img.shields.io/badge/asyncpg-000000?logo=postgresql&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white) |
 | **DevOps, тестирование и инструменты** | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?logo=docker&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white) ![Nginx](https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=white) ![Gunicorn](https://img.shields.io/badge/Gunicorn-499848?logo=gunicorn&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnu-bash&logoColor=white) ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?logo=pytest&logoColor=white) |
 | **API и безопасность** | ![REST API](https://img.shields.io/badge/REST_API-FF6C37?logo=postman&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white) |
@@ -48,8 +48,10 @@
 
 | Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
 | :--- | :--- | :--- | :--- |
-| **AI и интеллектуальные системы** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
+| **AI и LLM** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
 | **ML/NLP пайплайн** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | Сквозной пайплайн классификации тональности с обучением с учётом уверенности разметчиков, объяснимыми предсказаниями (SHAP), production REST API и CI с покрытием тестами >90%. |
+| **ML/NLP-исследование** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Live-демо с ежемесячным автообновлением, 280+ тестов. |
+| **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с live-демо и CLI. |
 | **ML и NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для семантического анализа эмбеддингов с визуализацией аналогий через векторные стрелки, проекцией кластеров (PCA/t-SNE) и оценкой качества на Google Analogy Test Set. |
 | **ML и NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актёры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
 | **ML и NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Модульный пайплайн бинарной классификации SMS (Naive Bayes/Logistic Regression) с CLI-интерфейсом, структурированным логированием и интерпретируемостью через матрицу ошибок. |
@@ -103,6 +105,53 @@
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis)
+
+
+### 🔎 TopicLens [ML, NLP, Topic Modeling]
+
+**Сравнительное исследование тематического моделирования: LDA, NMF и LSA обучены на одном корпусе из 20 тыс. аннотаций arXiv (2018–2026) и сравниваются по когерентности, разнообразию тем и согласию с реальными категориями — а не по тому, насколько правдоподобно выглядят их топ-слова.** Включает интерактивное приложение на Streamlit и live-демо, которое само обновляется каждый месяц.
+
+**✨ Ключевые особенности:**
+*   **Строгое сравнение моделей:** Когерентность NPMI и UMass (реализована напрямую, без gensim), разнообразие и попарное пересечение тем, согласие с категориями arXiv (NMI, ARI, purity). NMF лидирует по всем метрикам качества (NPMI 0.196, purity 0.816); близкая к случайной purity у LSA разобрана как показательная неудача, а сама LSA используется для поиска похожих документов.
+*   **Сопоставление тем между моделями:** Векторы тем сопоставляются венгерским алгоритмом — LDA и NMF независимо нашли одну и ту же структуру (средняя близость 0.68, до 0.91 для отдельных тем).
+*   **Динамика тем за 8 лет:** Поквартальные доли тем показывают рост темы LLM с 4% до 25% корпуса с переломом в 2023 году — это смещение тематики исследований, а не рост числа публикаций, подтверждённое независимо от моделей.
+*   **Решения на основе измерений:** Каждый параметр выбран экспериментально: перебор числа тем с оценкой шума от random seed, ограничение словаря, повысившее когерентность и purity, предметные стоп-слова, отобранные по данным, баланс сходимости LDA и времени обучения.
+*   **Надёжный конвейер данных:** Клиент arXiv API с возобновляемыми чекпоинтами, отдельная обработка HTTP 429 с учётом `Retry-After`, самоинвалидирующийся parquet-кэш; поддержка собственных данных через CSV.
+*   **Чистая архитектура:** Единый контракт `TopicModel` для трёх алгоритмов, бандл модели, гарантирующий идентичную предобработку при обучении и инференсе, YAML-конфиг с валидацией через pydantic и переопределением из переменных окружения.
+*   **Тестирование и автоматизация:** 280+ тестов без обращения к сети, CI на Python 3.11/3.12 с линтером и аудитом зависимостей, а также плановый воркфлоу, который загружает новые месяцы, переобучает модели и обновляет демо только после прохождения тестов.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/topic-lens) · [**🚀 Демо**](https://topic-lens.streamlit.app/)
+
+
+### 🌍 Polyglot Extractive Summarizer [NLP, TextRank, Streamlit]
+
+**Лёгкий мультиязычный инструмент экстрактивной суммаризации текстов на основе алгоритма TextRank.** Обрабатывает статьи Википедии (по URL или названию) и локальные `.txt`-файлы, работает через веб-интерфейс и командную строку.
+
+**✨ Ключевые особенности:**
+*   **Мультиязычность:** Английский, русский, немецкий, французский и испанский «из коробки»; новый язык добавляется одной записью в словаре и соответствующими ресурсами NLTK.
+*   **Два источника данных:** Чистый текст из Википедии через MediaWiki API или загрузка локальных `.txt`-файлов в кодировке UTF-8.
+*   **Гибкая настройка длины:** Размер резюме задаётся абсолютным числом предложений или долей от исходного текста.
+*   **Сохранение исходного порядка:** Извлечённые предложения выстраиваются в порядке их следования в тексте, поэтому резюме читается связно.
+*   **Два интерфейса:** Интерактивное веб-приложение на Streamlit (развёрнуто как live-демо) и CLI для использования в скриптах.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![sumy](https://img.shields.io/badge/sumy_%28TextRank%29-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Wikipedia API](https://img.shields.io/badge/Wikipedia_API-000000?style=for-the-badge&logo=wikipedia&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/polyglot-extractive-summarizer) · [**🚀 Демо**](https://polyglot-extractive-summarizer.streamlit.app/)
 
 
 ### 🔬 Embedding Visualizer [ML, NLP, Visualization]
