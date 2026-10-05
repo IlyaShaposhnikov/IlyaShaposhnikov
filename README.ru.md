@@ -8,7 +8,7 @@
 
 ## Почему NLP и ML?
 
-Мой путь в ML был нестандартным, и именно это стало моим преимуществом. Имея бэкграунд в **лингвистике и восточных языках**, я более **12 лет** работал с языковыми данными в международной корпорации: управлял NMT-воркфлоу, CAT-системами, терминологическими базами и переводческой памятью. Я видел, как обрабатываются языковые данные, где возникают лингвистические _«узкие места»_, и как автоматизация экономит тысячи часов.
+Мой путь в ML был нестандартным, и именно это стало моим преимуществом. Имея бэкграунд в **лингвистике и восточных языках**, я более **12 лет** работал с языковыми данными в международной корпорации: управлял NMT-воркфлоу, CAT-системами, терминологическими базами и переводческой памятью. Я видел, как обрабатываются языковые данные, где возникают лингвистические _узкие места_, и как автоматизация экономит тысячи часов.
 
 Это глубокое понимание того, как работает язык — от морфологии до семантики — закономерно привело меня в машинное обучение. Сегодня я сочетаю это лингвистическое чутье с современным ML-инжинирингом, чтобы создавать системы, которые по-настоящему понимают человеческий язык.
 
@@ -16,12 +16,12 @@
 
 | Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
 | :--- | :--- | :--- | :--- |
-| **NLP-исследование** | [🔎 TopicLens](README.full.ru.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Live-демо с ежемесячным автообновлением, 280+ тестов. |
+| **NLP-исследование** | [🔎 TopicLens](README.full.ru.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Демо с ежемесячным автообновлением, 280+ тестов. |
 | **NLP-пайплайн** | [✈️ Airline Sentiment Analysis](README.full.ru.md#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | Сквозной пайплайн классификации тональности с обучением с учетом уверенности разметчиков, объяснимыми предсказаниями (SHAP), production REST API и CI с покрытием тестами >90%. |
 | **LLM-приложение** | [🤖 Video Analytics Bot](README.full.ru.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
 | **NLP-исследование** | [🔬 Embedding Visualizer](README.full.ru.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для семантического анализа эмбеддингов с визуализацией аналогий через векторные стрелки, проекцией кластеров (PCA/t-SNE) и оценкой качества на Google Analogy Test Set. |
-| **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](README.full.ru.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с live-демо и CLI. |
-| **Backend и API** | [💰 Wallet REST API](README.full.ru.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Высоконагруженное асинхронное API для финансовых операций с гарантией консистентности данных при конкурентных запросах. |
+| **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](README.full.ru.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с демо и CLI. |
+| **Backend и API** | [💰 Wallet REST API](README.full.ru.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Асинхронный API для финансовых операций с гарантией консистентности данных при конкурентных запросах. |
 
 ▶️ **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
