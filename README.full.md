@@ -8,23 +8,25 @@
 
 | Category | Project | Key Technologies | Core Concept & Challenges |
 | :--- | :--- | :--- | :--- |
-| **ML/NLP Research** | [🔎 TopicLens](README.full.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
-| **ML/NLP Pipeline** | [✈️ Airline Sentiment Analysis](README.full.md#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | End-to-end sentiment classification with confidence-weighted training, explainable predictions (SHAP), production REST API, and CI with >90% test coverage. |
-| **AI & LLM Systems** | [🤖 Video Analytics Bot](README.full.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
-| **ML & NLP** | [🔬 Embedding Visualizer](README.full.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for semantic analysis of word embeddings with vector-arrow analogy visualization, PCA/t-SNE cluster projection, and Google Analogy Test Set evaluation. |
-| **NLP Application** | [🌍 Polyglot Extractive Summarizer](README.full.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
-| **Production Backend** | [💰 Wallet REST API](README.full.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | High-load asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
-| **ML & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
-| **ML & NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Modular pipeline for binary SMS classification using Naive Bayes/Logistic Regression, featuring CLI interface, structured logging, artifact persistence, and interpretability via confusion matrices and word clouds. |
-| **NLP Research** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comprehensive comparative analysis of 5 text preprocessing methods (basic, stop-word removal, lemmatization, stemming, simple tokenization) for news classification using CountVectorizer. Includes evaluation by accuracy, speed, and vocabulary size. |
+| **NLP Research** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
+| **NLP Pipeline** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | End-to-end sentiment classification with confidence-weighted training, explainable predictions (SHAP), production REST API, and CI with >90% test coverage. |
+| **LLM Application** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
+| **NLP Research** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for semantic analysis of word embeddings with vector-arrow analogy visualization, PCA/t-SNE cluster projection, and Google Analogy Test Set evaluation. |
+| **NLP Application** | [🌍 Polyglot Extractive Summarizer](#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
+| **Backend & API** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | High-load asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
+| **NLP Pipeline** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Modular pipeline for binary SMS classification using Naive Bayes/Logistic Regression, featuring CLI interface, structured logging, artifact persistence, and interpretability via confusion matrices and word clouds. |
+| **Recommender System** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
+| **NLP Research** | [📊 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comprehensive comparative analysis of 5 text preprocessing methods (basic, stop-word removal, lemmatization, stemming, simple tokenization) for news classification using CountVectorizer. Includes evaluation by accuracy, speed, and vocabulary size. |
 | **NLP Research** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
-| **ML Research** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Dual predictive models for agricultural economics: regression for price forecasting (R² = 0.969) and classification for color prediction (F1 = 0.94) with interpretable outputs and production-ready structure. |
+| **Tabular ML** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Dual predictive models for agricultural economics: regression for price forecasting (R² = 0.969) and classification for color prediction (F1 = 0.94) with interpretable outputs and production-ready structure. |
 | **Backend & API** | [🎗️ Funds Allocation API](#-funds-allocation-api-fastapi) | FastAPI, SQLAlchemy, JWT, Alembic, Pydantic | API for managing charitable projects with automatic donation distribution (FIFO), JWT authentication, and comprehensive documentation. |
-| **Web Services & API** | [🍳 Recipe Network](#-recipe-network-django-rest-framework) | Django, Django REST Framework, Djoser, PostgreSQL, Docker | Web application for publishing cooking recipes with subscriptions, favorites, and shopping lists. Backend (API) and containerization implemented. |
+| **Backend & API** | [🍳 Recipe Network](#-recipe-network-django-rest-framework) | Django, Django REST Framework, Djoser, PostgreSQL, Docker | Web application for publishing cooking recipes with subscriptions, favorites, and shopping lists. Backend (API) and containerization implemented. |
 | **Backend & API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API for a social network with posts, comments, subscriptions, and groups. Full JWT-based authentication. |
-| **Web Services & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
+| **Backend & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 
-🚀 **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+
+## 📖 Project Details
 
 ### 🔎 TopicLens [ML, NLP, Topic Modeling]
 
@@ -49,7 +51,7 @@
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/topic-lens) · [**🚀 Live Demo**](https://topic-lens.streamlit.app/)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/topic-lens) · [**▶️ Live Demo**](https://topic-lens.streamlit.app/)
 
 
 ### ✈️ Airline Sentiment Analysis Pipeline [ML, NLP, FastAPI, Streamlit]
@@ -103,7 +105,7 @@
 
 **✨ Key Features:**
 *   **Semantic Cluster Projection:** Automatic 2D mapping of seed words and their nearest neighbors with color-coded clusters using PCA (global structure) and t-SNE (local neighborhoods).
-*   **Vector-Arrow Analogy Visualization:** Unique 2D plots showing semantic relationships as directional arrows (`w2 → w1` and `result → w3`), visually demonstrating parallelism in vector arithmetic (`king - man + woman = queen`).
+*   **Vector-Arrow Analogy Visualization:** Unique 2D plots showing semantic relationships as directional arrows (`man → king` and `woman → queen`), visually demonstrating parallelism in vector arithmetic (`king - man + woman ≈ queen`).
 *   **Smart Model Management:** Automatic download with integrity checks, mirror fallback, and binary caching for instant subsequent loads.
 *   **Lazy Model Loading**: Models load on demand via Model Manager, improving startup speed and memory efficiency.
 *   **Robust Modular Architecture**: Separated concerns across `services`, `presentation`, `visualization`, and `data` layers for clean, testable code. Centralized configuration and enhanced logging.
@@ -138,7 +140,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Wikipedia API](https://img.shields.io/badge/Wikipedia_API-000000?style=for-the-badge&logo=wikipedia&logoColor=white)
 
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/polyglot-extractive-summarizer) · [**🚀 Live Demo**](https://polyglot-extractive-summarizer.streamlit.app/)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/polyglot-extractive-summarizer) · [**▶️ Live Demo**](https://polyglot-extractive-summarizer.streamlit.app/)
 
 
 ### 💰 Wallet REST API [FastAPI, PostgreSQL]
@@ -160,25 +162,6 @@
 ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/wallet-api)
-
-
-### 🎬 Movie Recommendation System [NLP, TF-IDF]
-
-**Film recommendation engine with dual UI: Telegram bot and console application.** The system analyzes descriptions and cast using NLP and ML techniques.
-
-**✨ Key Features:**
-*   **Two Algorithms:** Recommendations based on **genres/keywords** and **weighted cast analysis**.
-*   **Two Interfaces:** Convenient **Telegram bot** and a visual **console interface** with charts.
-*   **End-to-End Pipeline:** From data preprocessing (TF-IDF) to an interactive web application.
-
-**🛠 Tech Stack:**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
-![Telegram Bot API](https://img.shields.io/badge/Telegram_Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
-
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
 
 
 ### 🚫 SMS Spam Detector [ML, NLP, CLI]
@@ -205,7 +188,26 @@
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/sms-spam-detector)
 
 
-### 🔬 CountVectorizer Comparison Project [NLP]
+### 🎬 Movie Recommendation System [NLP, TF-IDF]
+
+**Film recommendation engine with dual UI: Telegram bot and console application.** The system analyzes descriptions and cast using NLP and ML techniques.
+
+**✨ Key Features:**
+*   **Two Algorithms:** Recommendations based on **genres/keywords** and **weighted cast analysis**.
+*   **Two Interfaces:** Convenient **Telegram bot** and a visual **console interface** with charts.
+*   **End-to-End Pipeline:** From data preprocessing (TF-IDF) to an interactive web application.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![Telegram Bot API](https://img.shields.io/badge/Telegram_Bot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
+
+
+### 📊 CountVectorizer Comparison Project [NLP]
 
 **Research project comparing the effectiveness of 5 text preprocessing methods** (basic, stop-word removal, lemmatization, stemming, simple tokenization) when vectorizing with `CountVectorizer` on the BBC News dataset. **Built with a modular architecture** for enhanced readability and maintainability.
 
@@ -284,7 +286,7 @@
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=python&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
 ![Alembic](https://img.shields.io/badge/Alembic-000000?style=for-the-badge&logo=alembic&logoColor=white)
-![Pydantic](https://img.shields.io/badge/Pydantic-92000?style=for-the-badge&logo=pydantic&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/funds_allocation_system)
 
@@ -346,6 +348,7 @@
 ![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/shortlink_generator)
+
 🔙 **[Key Projects](README.md#-key-projects)**
 
 🇷🇺 **[Russian Version / На русском](README.full.ru.md)**
