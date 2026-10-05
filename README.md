@@ -13,6 +13,22 @@ My path into ML wasn't traditional — and that's my edge. With a background in 
 This deep understanding of how language works — from morphology to semantics — naturally pulled me into Machine Learning. Today, I combine this linguistic intuition with modern ML engineering to build systems that truly understand human language.
 
 
+## 🚀 Key Projects
+
+| Category | Project | Key Technologies | Core Concept & Challenges |
+| :--- | :--- | :--- | :--- |
+| **NLP Research** | [🔎 TopicLens](README.full.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
+| **NLP Research** | [✈️ Airline Sentiment Analysis](README.full.md#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | End-to-end sentiment classification with confidence-weighted training, explainable predictions (SHAP), production REST API, and CI with >90% test coverage. |
+| **LLM Application** | [🤖 Video Analytics Bot](README.full.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
+| **NLP Research** | [🔬 Embedding Visualizer](README.full.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for semantic analysis of word embeddings with vector-arrow analogy visualization, PCA/t-SNE cluster projection, and Google Analogy Test Set evaluation. |
+| **NLP Application** | [🌍 Polyglot Extractive Summarizer](README.full.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
+| **Backend & API** | [💰 Wallet REST API](README.full.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | High-load asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
+
+▶️ **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+
+📚 **[Full Project List](README.full.md)** — all projects with detailed descriptions
+
+
 ## 🛠 Technology Stack
 
 | Category | Technologies |
@@ -44,17 +60,4 @@ I'm looking for an **ML/NLP/LLM Engineer** role in a product-driven team where I
 
 **💼 LinkedIn:** [@iliashaposhnikov](https://linkedin.com/in/iliashaposhnikov)
 
-## 🚀 Key Projects
-
-| Category | Project | Key Technologies | Core Concept & Challenges |
-| :--- | :--- | :--- | :--- |
-| **ML/NLP Research** | [🔎 TopicLens](README.full.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
-| **ML/NLP Pipeline** | [✈️ Airline Sentiment Analysis](README.full.md#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | End-to-end sentiment classification with confidence-weighted training, explainable predictions (SHAP), production REST API, and CI with >90% test coverage. |
-| **AI & LLM Systems** | [🤖 Video Analytics Bot](README.full.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
-| **ML & NLP** | [🔬 Embedding Visualizer](README.full.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for semantic analysis of word embeddings with vector-arrow analogy visualization, PCA/t-SNE cluster projection, and Google Analogy Test Set evaluation. |
-| **NLP Application** | [🌍 Polyglot Extractive Summarizer](README.full.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
-| **Production Backend** | [💰 Wallet REST API](README.full.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | High-load asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
-
-🚀 **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
-
-📚 **[Full Project List](README.full.md)** — all projects with detailed descriptions
+🇷🇺 **[Russian Version / На русском](README.ru.md)**
