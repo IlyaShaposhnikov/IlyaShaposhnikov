@@ -13,12 +13,12 @@
 | **LLM Application** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
 | **NLP Research** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for semantic analysis of word embeddings with vector-arrow analogy visualization, PCA/t-SNE cluster projection, and Google Analogy Test Set evaluation. |
 | **NLP Application** | [🌍 Polyglot Extractive Summarizer](#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
-| **Backend & API** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | High-load asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
+| **Backend & API** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
 | **NLP Pipeline** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Modular pipeline for binary SMS classification using Naive Bayes/Logistic Regression, featuring CLI interface, structured logging, artifact persistence, and interpretability via confusion matrices and word clouds. |
 | **Recommender System** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
 | **NLP Research** | [📊 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comprehensive comparative analysis of 5 text preprocessing methods (basic, stop-word removal, lemmatization, stemming, simple tokenization) for news classification using CountVectorizer. Includes evaluation by accuracy, speed, and vocabulary size. |
 | **NLP Research** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
-| **Tabular ML** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Dual predictive models for agricultural economics: regression for price forecasting (R² = 0.969) and classification for color prediction (F1 = 0.94) with interpretable outputs and production-ready structure. |
+| **Tabular ML** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Dual predictive models for agricultural economics: regression for price forecasting (R² = 0.969) and classification for color prediction (F1 = 0.94) with interpretable outputs. |
 | **Backend & API** | [🎗️ Funds Allocation API](#-funds-allocation-api-fastapi) | FastAPI, SQLAlchemy, JWT, Alembic, Pydantic | API for managing charitable projects with automatic donation distribution (FIFO), JWT authentication, and comprehensive documentation. |
 | **Backend & API** | [🍳 Recipe Network](#-recipe-network-django-rest-framework) | Django, Django REST Framework, Djoser, PostgreSQL, Docker | Web application for publishing cooking recipes with subscriptions, favorites, and shopping lists. Backend (API) and containerization implemented. |
 | **Backend & API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API for a social network with posts, comments, subscriptions, and groups. Full JWT-based authentication. |
@@ -145,7 +145,7 @@
 
 ### 💰 Wallet REST API [FastAPI, PostgreSQL]
 
-**High-load asynchronous REST API for managing financial balances.** The service ensures data consistency during concurrent deposit/withdrawal operations, implementing an e-wallet pattern. *This project demonstrates my ability to write production-grade, concurrent backend code — essential for deploying ML models at scale and handling high-throughput inference workloads.*
+**Asynchronous REST API for managing financial balances.** The service ensures data consistency during concurrent deposit/withdrawal operations, implementing an e-wallet pattern. *This project demonstrates my ability to write production-grade, concurrent backend code — essential for deploying ML models at scale and handling high-throughput inference workloads.*
 
 **✨ Key Features:**
 *   **Concurrency Safety:** Guarantees data integrity through `READ COMMITTED` transactions and `SELECT ... FOR UPDATE` row-level locks.
@@ -166,7 +166,7 @@
 
 ### 🚫 SMS Spam Detector [ML, NLP, CLI]
 
-**Modular pipeline for binary SMS classification using scikit-learn vectorizers and probabilistic models**, designed with production-ready patterns and an intuitive command-line interface.
+**Modular pipeline for binary SMS classification using scikit-learn vectorizers and probabilistic models** with an intuitive command-line interface.
 
 **✨ Key Features:**
 *   **Flexible Model Selection**: Support for **Naive Bayes** (fast baseline) and **Logistic Regression** (higher accuracy) via `--model` CLI argument.
@@ -195,7 +195,7 @@
 **✨ Key Features:**
 *   **Two Algorithms:** Recommendations based on **genres/keywords** and **weighted cast analysis**.
 *   **Two Interfaces:** Convenient **Telegram bot** and a visual **console interface** with charts.
-*   **End-to-End Pipeline:** From data preprocessing (TF-IDF) to an interactive web application.
+*   **End-to-End Pipeline:** From data preprocessing (TF-IDF) to a Telegram bot and a console app with charts.
 
 **🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -250,13 +250,13 @@
 
 ### 🔮 Pumpkin Price & Color Forecast [scikit-learn, pandas, EDA]
 
-**Dual predictive modeling project for US agricultural market data: regression for pumpkin price forecasting and classification for color prediction, with emphasis on interpretability and production-ready code.**
+**Dual predictive modeling project for US agricultural market data: regression for pumpkin price forecasting and classification for color prediction, with emphasis on interpretability.**
 
 **✨ Key Features:**
 *   **Interpretable Regression Models:** From simple linear (`y = kx + b`) to multivariate polynomial models achieving **R² = 0.969**, with clear formulas and performance metrics (MSE, RMSE).
 *   **High-Accuracy Classification:** Logistic regression classifier predicting pumpkin color with **F1 = 0.94** and **AUC = 0.975**, including threshold optimization and confusion matrix analysis.
 *   **Comprehensive EDA Pipeline:** Automated exploratory analysis with visualizations of seasonality, correlations, and feature distributions saved to structured output directories.
-*   **Production-Ready Architecture:** Modular code structure (`src/`, `scripts/`, `utils/`), reusable components, and demo script for end-to-end pipeline execution.
+*   **Architecture:** Modular code structure (`src/`, `scripts/`, `utils/`), reusable components, and demo script for end-to-end pipeline execution.
 *   **Practical Agricultural Economics Focus:** Real-world dataset (US pumpkin market) with actionable insights on price drivers (variety, location, packaging) and color predictors.
 
 **🛠 Tech Stack:**
