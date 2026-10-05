@@ -1,6 +1,6 @@
 🇬🇧 **[English Version / На английском](README.full.md)**
 
-# 📚 Полный каталог проектов
+# 📚 Полный список проектов
 
 🔙 **[Ключевые проекты](README.ru.md#-ключевые-проекты)**
 
@@ -8,27 +8,29 @@
 
 | Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
 | :--- | :--- | :--- | :--- |
-| **ML/NLP-исследование** | [🔎 TopicLens](README.full.ru.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Live-демо с ежемесячным автообновлением, 280+ тестов. |
-| **ML/NLP пайплайн** | [✈️ Airline Sentiment Analysis](README.full.ru.md#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | Сквозной пайплайн классификации тональности с обучением с учетом уверенности разметчиков, объяснимыми предсказаниями (SHAP), production REST API и CI с покрытием тестами >90%. |
-| **AI и LLM** | [🤖 Video Analytics Bot](README.full.ru.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
-| **ML и NLP** | [🔬 Embedding Visualizer](README.full.ru.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для семантического анализа эмбеддингов с визуализацией аналогий через векторные стрелки, проекцией кластеров (PCA/t-SNE) и оценкой качества на Google Analogy Test Set. |
-| **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](README.full.ru.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с live-демо и CLI. |
-| **Production Backend** | [💰 Wallet REST API](README.full.ru.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Высоконагруженное асинхронное API для финансовых операций с гарантией консистентности данных при конкурентных запросах. |
-| **ML и NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актеры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
-| **ML и NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Модульный пайплайн для бинарной классификации SMS с использованием Naive Bayes/Logistic Regression, CLI-интерфейсом, структурированным логированием, сохранением артефактов и интерпретируемостью через матрицу ошибок и облака слов. |
-| **NLP-исследование** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Комплексный сравнительный анализ 5 методов предобработки текста (базовый, удаление стоп-слов, лемматизация, стемминг, простая токенизация) для задачи классификации новостей с использованием CountVectorizer. Включает оценку по точности, скорости и размеру словаря. |
+| **NLP-исследование** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Демо с ежемесячным автообновлением, 280+ тестов. |
+| **NLP-пайплайн** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | Сквозной пайплайн классификации тональности с обучением с учетом уверенности разметчиков, объяснимыми предсказаниями (SHAP), production REST API и CI с покрытием тестами >90%. |
+| **LLM-приложение** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
+| **NLP-исследование** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для семантического анализа эмбеддингов с визуализацией аналогий через векторные стрелки, проекцией кластеров (PCA/t-SNE) и оценкой качества на Google Analogy Test Set. |
+| **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с демо и CLI. |
+| **Backend и API** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Высоконагруженный асинхронный API для финансовых операций с гарантией консистентности данных при конкурентных запросах. |
+| **NLP-пайплайн** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Модульный пайплайн для бинарной классификации SMS с использованием Naive Bayes/Logistic Regression, CLI-интерфейсом, структурированным логированием, сохранением артефактов и интерпретируемостью через матрицу ошибок и облака слов. |
+| **Рекомендательная система** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end система рекомендаций на основе текстовых данных (жанры, актеры) с двумя интерфейсами: Telegram-бот и консольное приложение с визуализацией. |
+| **NLP-исследование** | [📊 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Комплексный сравнительный анализ 5 методов предобработки текста (базовый, удаление стоп-слов, лемматизация, стемминг, простая токенизация) для задачи классификации новостей с использованием CountVectorizer. Включает оценку по точности, скорости и размеру словаря. |
 | **NLP-исследование** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | Глубокий анализ TF-IDF: собственная реализация алгоритма с нуля и детальное сравнение (формулы, веса, ранжирование) с библиотечной версией scikit-learn для извлечения ключевых слов из текстов. |
-| **ML-исследование** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Две прогнозные модели для сельскохозяйственной экономики: регрессия для прогноза цены (R² = 0.969) и классификация для определения цвета (F1 = 0.94) с интерпретируемыми результатами и готовой к использованию в рабочей среде структурой кода. |
+| **ML на табличных данных** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Две прогнозные модели для сельскохозяйственной экономики: регрессия для прогноза цены (R² = 0.969) и классификация для определения цвета (F1 = 0.94) с интерпретируемыми результатами. |
 | **Backend и API** | [🎗️ Funds Allocation API](#-funds-allocation-api-fastapi) | FastAPI, SQLAlchemy, JWT, Alembic, Pydantic | API для управления благотворительными проектами с автоматическим распределением пожертвований (FIFO), JWT-аутентификацией и полной документацией. |
-| **Веб-сервисы и API** | [🍳 Recipe Network](#-recipe-network-django-rest-framework) | Django, Django REST Framework, Djoser, PostgreSQL, Docker | Веб-приложение для публикации кулинарных рецептов с подписками, избранным и списком покупок. Реализован бэкенд (API) и контейнеризация. |
+| **Backend и API** | [🍳 Recipe Network](#-recipe-network-django-rest-framework) | Django, Django REST Framework, Djoser, PostgreSQL, Docker | Веб-приложение для публикации кулинарных рецептов с подписками, избранным и списком покупок. Реализован бэкенд (API) и контейнеризация. |
 | **Backend и API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API для социальной сети с постами, комментариями, подписками и группами. Полная аутентификация через JWT. |
-| **Веб-сервисы и API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
+| **Backend и API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
 
-🚀 **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+
+## 📖 Подробное описание проектов
 
 ### 🔎 TopicLens [ML, NLP, Topic Modeling]
 
-**Сравнительное исследование тематического моделирования: LDA, NMF и LSA обучены на одном корпусе из 20 тыс. аннотаций arXiv (2018–2026) и сравниваются по когерентности, разнообразию тем и согласию с реальными категориями — а не по тому, насколько правдоподобно выглядят их топ-слова.** Включает интерактивное приложение на Streamlit и live-демо, которое само обновляется каждый месяц.
+**Сравнительное исследование тематического моделирования: LDA, NMF и LSA обучены на одном корпусе из 20 тыс. аннотаций arXiv (2018–2026) и сравниваются по когерентности, разнообразию тем и согласию с реальными категориями — а не по тому, насколько правдоподобно выглядят их топ-слова.** Включает интерактивное приложение на Streamlit и демо, которое само обновляется каждый месяц.
 
 **✨ Ключевые особенности:**
 *   **Строгое сравнение моделей:** Когерентность NPMI и UMass (реализована напрямую, без gensim), разнообразие и попарное пересечение тем, согласие с категориями arXiv (NMI, ARI, purity). NMF лидирует по всем метрикам качества (NPMI 0.196, purity 0.816); близкая к случайной purity у LSA разобрана как показательная неудача, а сама LSA используется для поиска похожих документов.
@@ -49,18 +51,18 @@
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/topic-lens) · [**🚀 Демо**](https://topic-lens.streamlit.app/)
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/topic-lens) · [**▶️ Демо**](https://topic-lens.streamlit.app/)
 
 
 ### ✈️ Airline Sentiment Analysis Pipeline [ML, NLP, FastAPI, Streamlit]
 
-**Готовый к использованию в рабочей среде сквозной ML-пайплайн для классификации тональности твитов об авиакомпаниях** с обучением с учетом уверенности аннотаций, объяснимым ИИ, асинхронным REST API и интерактивной панелью управления.
+**Production-ready сквозной ML-пайплайн для классификации тональности твитов об авиакомпаниях** с обучением с учетом уверенности аннотаций, объяснимым ИИ, асинхронным REST API и интерактивной панелью управления.
 
 **✨ Ключевые особенности:**
 *   **Обучение с учетом уверенности**: Взвешивание примеров на основе баллов уверенности разметчиков для более надежного обучения модели.
 *   **Объяснимые предсказания**: Интерпретация отдельных предсказаний через топ-слова с наибольшим вкладом и опциональную визуализацию SHAP-значений.
 *   **Production-ready REST API**: Асинхронно-безопасный сервис на FastAPI с валидацией через Pydantic v2, потокобезопасным обслуживанием модели, поддержкой CORS и обработкой таймаутов.
-*   **Интерактивная панель управления**: Веб-интерфейс на Streamlit для одиночных и пакетных предсказаний с экспортом в CSV/JSON, проверкой здоровья API в реальном времени и сохранением состояния сессии.
+*   **Интерактивный дашборд**: Веб-интерфейс на Streamlit для одиночных и пакетных предсказаний с экспортом в CSV/JSON, проверкой доступности API (health check) в реальном времени и сохранением состояния сессии.
 *   **Комплексное тестирование**: Покрытие тестами >90% с юнит- и интеграционными тестами, CI через GitHub Actions, аудит безопасности через pip-audit.
 *   **Модульная архитектура**: Четкое разделение ответственности между слоями загрузки данных, предобработки, моделирования, API и дашборда с централизованным управлением конфигурацией.
 
@@ -103,10 +105,10 @@
 
 **✨ Ключевые особенности:**
 *   **Визуализация семантических кластеров:** Автоматическое 2D-отображение опорных слов и их ближайших соседей с цветовой кодировкой кластеров с использованием PCA (глобальная структура) и t-SNE (локальные окрестности).
-*   **Визуализация аналогий через векторные стрелки:** Уникальные 2D-графики, отображающие семантические отношения как направленные стрелки (`man → king` и `result → woman`), наглядно демонстрирующие параллелизм в векторной арифметике (`king - man + woman = queen`).
+*   **Визуализация аналогий через векторные стрелки:** Уникальные 2D-графики, отображающие семантические отношения как направленные стрелки (`man → king` и `woman → queen`), наглядно демонстрирующие параллелизм в векторной арифметике (`king - man + woman ≈ queen`).
 *   **Оптимизированное управление моделями:** Автоматическая загрузка с проверкой целостности, использованием резервных зеркал и бинарным кэшированием для мгновенной загрузки при повторных запусках.
 *   **Ленивая загрузка моделей**: Модели загружаются по требованию через менеджер моделей, что улучшает скорость запуска и эффективность использования памяти.
-*   **Модульная архитектура**: Разделение ответственностей по слоям `services`, `presentation`, `visualization`, `data` для чистого и тестируемого кода. Централизованная конфигурация и улучшенное логгирование.
+*   **Модульная архитектура**: Разделение ответственностей по слоям `services`, `presentation`, `visualization`, `data` для чистого и тестируемого кода. Централизованная конфигурация и улучшенное логирование.
 *   **Оценка качества моделей:** Тестирование на наборе Google Analogy Test Set (19 544 задачи) с разбивкой по семантическим/синтаксическим категориям и анализом покрытия словаря.
 *   **Исследование без программирования:** Интуитивная командная оболочка с контекстной справкой и демо-режимом — для глубокого семантического анализа не требуется писать код.
 
@@ -129,7 +131,7 @@
 *   **Два источника данных:** Чистый текст из Википедии через MediaWiki API или загрузка локальных `.txt`-файлов в кодировке UTF-8.
 *   **Гибкая настройка длины:** Размер резюме задается абсолютным числом предложений или долей от исходного текста.
 *   **Сохранение исходного порядка:** Извлеченные предложения выстраиваются в порядке их следования в тексте, поэтому резюме читается связно.
-*   **Два интерфейса:** Интерактивное веб-приложение на Streamlit (развернуто как live-демо) и CLI для использования в скриптах.
+*   **Два интерфейса:** Интерактивное веб-приложение на Streamlit (развернуто как демо) и CLI для использования в скриптах.
 
 **🛠 Стек технологий:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -138,12 +140,12 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Wikipedia API](https://img.shields.io/badge/Wikipedia_API-000000?style=for-the-badge&logo=wikipedia&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/polyglot-extractive-summarizer) · [**🚀 Демо**](https://polyglot-extractive-summarizer.streamlit.app/)
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/polyglot-extractive-summarizer) · [**▶️ Демо**](https://polyglot-extractive-summarizer.streamlit.app/)
 
 
 ### 💰 Wallet REST API [FastAPI, PostgreSQL]
 
-**Высоконагруженное асинхронное REST API для управления финансовыми балансами.** Сервис гарантирует консистентность данных при параллельных операциях пополнения и списания, реализуя паттерн электронного кошелька. *Этот проект демонстрирует мои навыки написания production-grade асинхронного бэкенда — что критично для масштабного деплоя ML-моделей и обработки high-throughput запросов к инференсу.*
+**Высоконагруженный асинхронный REST API для управления финансовыми балансами.** Сервис гарантирует консистентность данных при параллельных операциях пополнения и списания, реализуя паттерн электронного кошелька. *Этот проект демонстрирует мои навыки написания надежного асинхронного бэкенда, что критично для  деплоя ML-моделей и обработки большого потока запросов к инференсу.*
 
 **✨ Ключевые особенности:**
 *   **Конкурентная безопасность:** Гарантия целостности данных через транзакции `READ COMMITTED` и строковые блокировки `SELECT ... FOR UPDATE`.
@@ -160,6 +162,30 @@
 ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/wallet-api)
+
+
+### 🚫 SMS Spam Detector [ML, NLP, CLI]
+
+**Модульный пайплайн для бинарной классификации SMS с использованием векторизаторов и вероятностных моделей scikit-learn** с интуитивным интерфейсом командной строки.
+
+**✨ Ключевые особенности:**
+*   **Гибкий выбор модели**: Поддержка **наивного байесовского классификатора** (быстрый базовый вариант) и **логистической регрессии** (более высокая точность) через аргумент `--model` в CLI.
+*   **Адаптивная векторизация**: Переключение между **CountVectorizer** и **TfidfVectorizer** с настраиваемыми n-граммами, максимальным количеством признаков и обработкой стоп-слов.
+*   **Комплексная оценка**: Автоматический расчет accuracy, F1, precision, recall и ROC-AUC с экспортом в JSON для отслеживания экспериментов.
+*   **Инструменты интерпретируемости**: Визуализация матрицы ошибок через встроенный `ConfusionMatrixDisplay` из sklearn, облака слов для анализа спам/легитимных сообщений и просмотр ошибочно классифицированных примеров с вероятностями.
+*   **CLI-управляемый пайплайн**: Запуск полного цикла через `python scripts/train.py` с валидацией аргументов через argparse, воспроизводимость через `--random-state` и опциональная генерация графиков.
+*   **Паттерны**: Структурированное логирование (вывод в консоль и сохранение в файл), корректная обработка ошибок с кодами выхода, сохранение артефактов (модели, метрики, графики) с таймстемпами.
+*   **Модульная архитектура**: Четкое разделение ответственности между модулями `data`, `features`, `models`, `evaluation` и `visualization` для поддерживаемого и тестируемого кода.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/sms-spam-detector)
 
 
 ### 🎬 Movie Recommendation System [NLP, TF-IDF]
@@ -181,31 +207,7 @@
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/film-recommendation-tfidf)
 
 
-### 🚫 SMS Spam Detector [ML, NLP, CLI]
-
-**Модульный пайплайн для бинарной классификации SMS с использованием векторизаторов и вероятностных моделей scikit-learn**, разработанный с применением паттернов, готовых к использованию в рабочей среде, и интуитивным интерфейсом командной строки.
-
-**✨ Ключевые особенности:**
-*   **Гибкий выбор модели**: Поддержка **Наивного Байеса** (быстрый базовый вариант) и **Логистической регрессии** (более высокая точность) через аргумент `--model` в CLI.
-*   **Адаптивная векторизация**: Переключение между **CountVectorizer** и **TfidfVectorizer** с настраиваемыми n-граммами, максимальным количеством признаков и обработкой стоп-слов.
-*   **Комплексная оценка**: Автоматический расчет accuracy, F1, precision, recall и ROC-AUC с экспортом в JSON для отслеживания экспериментов.
-*   **Инструменты интерпретируемости**: Визуализация матрицы ошибок через встроенный `ConfusionMatrixDisplay` из sklearn, облака слов для анализа спам/легитимных сообщений и просмотр ошибочно классифицированных примеров с вероятностями.
-*   **CLI-управляемый пайплайн**: Запуск полного цикла через `python scripts/train.py` с валидацией аргументов через argparse, воспроизводимость через `--random-state` и опциональная генерация графиков.
-*   **Паттерны, готовые к использованию в рабочей среде**: Структурированное логирование (вывод в консоль и сохранение в файл), корректная обработка ошибок с кодами выхода, сохранение артефактов (модели, метрики, графики) с таймстемпами.
-*   **Модульная архитектура**: Четкое разделение ответственности между модулями `data`, `features`, `models`, `evaluation` и `visualization` для поддерживаемого и тестируемого кода.
-
-**🛠 Стек технологий:**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/sms-spam-detector)
-
-
-### 🔬 CountVectorizer Comparison Project [NLP]
+### 📊 CountVectorizer Comparison Project [NLP]
 
 **Проект для сравнения эффективности 5 методов предобработки текста** (базовый, удаление стоп-слов, лемматизация, стемминг, простая токенизация) при векторизации через `CountVectorizer` на датасете BBC News. **Разработан с использованием модульной архитектуры** для обеспечения лучшей читаемости и сопровождаемости кода.
 
@@ -248,13 +250,13 @@
 
 ### 🔮 Pumpkin Price & Color Forecast [scikit-learn, pandas, EDA]
 
-**Две прогнозные модели данных рынка тыкв в США: регрессия для прогноза цены и классификация для определения цвета, с акцентом на интерпретируемость и готовую к использованию в рабочей среде структуру кода.**
+**Две прогнозные модели на данных рынка тыкв в США: регрессия для прогноза цены и классификация для определения цвета с акцентом на интерпретируемость.**
 
 **✨ Ключевые особенности:**
 *   **Интерпретируемые регрессионные модели:** От простой линейной (`y = kx + b`) до многомерных полиномиальных моделей с **R² = 0.969**, с понятными формулами и метриками качества (MSE, RMSE).
 *   **Высокоточная классификация:** Классификатор на логистической регрессии для прогнозирования цвета тыквы с **F1 = 0.94** и **AUC = 0.975**, включая оптимизацию порога и анализ матрицы ошибок.
 *   **Комплексный EDA-пайплайн:** Автоматизированный разведочный анализ с визуализацией сезонности, корреляций и распределений признаков, сохраняемый в структурированные директории.
-*   **Архитектура, готовая к использованию в рабочей среде:** Модульная структура кода (`src/`, `scripts/`, `utils/`), переиспользуемые компоненты и демо-скрипт для запуска полного пайплайна.
+*   **Архитектура:** Модульная структура кода (`src/`, `scripts/`, `utils/`), переиспользуемые компоненты и демо-скрипт для запуска полного пайплайна.
 *   **Практический фокус на сельскохозяйственной экономике:** Реальный датасет (рынок тыкв США) с практическими выводами о ключевых факторах цены (сорт, локация, упаковка) и значимых признаках, влияющих на цвет.
 
 **🛠 Стек технологий:**
@@ -284,7 +286,7 @@
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=python&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
 ![Alembic](https://img.shields.io/badge/Alembic-000000?style=for-the-badge&logo=alembic&logoColor=white)
-![Pydantic](https://img.shields.io/badge/Pydantic-92000?style=for-the-badge&logo=pydantic&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 
 [**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/funds_allocation_system)
 
