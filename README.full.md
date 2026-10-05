@@ -8,66 +8,23 @@
 
 | Category | Project | Key Technologies | Core Concept & Challenges |
 | :--- | :--- | :--- | :--- |
-| **AI & LLM Systems** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
-| **ML/NLP Pipeline** | [✈️ Airline Sentiment Analysis Pipeline](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, TF-IDF, SHAP, pytest | End-to-end sentiment classification pipeline with confidence-weighted training, explainable predictions (SHAP), production REST API, interactive Streamlit dashboard, and CI/CD with >90% test coverage. |
-| **ML/NLP Research** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
-| **NLP Application** | [🌍 Polyglot Extractive Summarizer](#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
-| **ML & NLP** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for deep semantic analysis of word embeddings with vector-arrow analogy visualization, semantic cluster projection (PCA/t-SNE), and evaluation on Google Analogy Test Set through an intuitive CLI. Built with a robust, modular architecture. |
+| **ML/NLP Research** | [🔎 TopicLens](README.full.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
+| **ML/NLP Pipeline** | [✈️ Airline Sentiment Analysis](README.full.md#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | End-to-end sentiment classification with confidence-weighted training, explainable predictions (SHAP), production REST API, and CI with >90% test coverage. |
+| **AI & LLM Systems** | [🤖 Video Analytics Bot](README.full.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
+| **ML & NLP** | [🔬 Embedding Visualizer](README.full.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for semantic analysis of word embeddings with vector-arrow analogy visualization, PCA/t-SNE cluster projection, and Google Analogy Test Set evaluation. |
+| **NLP Application** | [🌍 Polyglot Extractive Summarizer](README.full.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
+| **Production Backend** | [💰 Wallet REST API](README.full.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | High-load asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). |
 | **ML & NLP** | [🎬 Movie Recommendation System](#-movie-recommendation-system-nlp-tf-idf) | scikit-learn, pandas, TF-IDF, Aiogram | End-to-end recommendation engine based on textual features (genres, cast) with dual interfaces: Telegram bot and console app with visualization. |
 | **ML & NLP** | [🚫 SMS Spam Detector](#-sms-spam-detector-ml-nlp-cli) | scikit-learn, pandas, CLI | Modular pipeline for binary SMS classification using Naive Bayes/Logistic Regression, featuring CLI interface, structured logging, artifact persistence, and interpretability via confusion matrices and word clouds. |
 | **NLP Research** | [🔬 CountVectorizer Comparison](#-countvectorizer-comparison-project-nlp) | scikit-learn, NLTK, Matplotlib, Seaborn | Comprehensive comparative analysis of 5 text preprocessing methods (basic, stop-word removal, lemmatization, stemming, simple tokenization) for news classification using CountVectorizer. Includes evaluation by accuracy, speed, and vocabulary size. |
 | **NLP Research** | [🔑 Text Keyword Extractor](#-text-keyword-extractor-tf-idf-nlp) | scikit-learn, pandas, NLTK | In-depth TF-IDF analysis: from-scratch algorithm implementation with detailed comparison (formulas, weights, ranking) against scikit-learn's version for keyword extraction. |
 | **ML Research** | [🔮 Pumpkin Price & Color Forecast](#-pumpkin-price--color-forecast-scikit-learn-pandas-eda) | scikit-learn, pandas, matplotlib, EDA | Dual predictive models for agricultural economics: regression for price forecasting (R² = 0.969) and classification for color prediction (F1 = 0.94) with interpretable outputs and production-ready structure. |
-| **Production Backend (MLOps)** | [💰 Wallet REST API](#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). *Demonstrates production-grade engineering skills required for deploying ML models at scale.* |
 | **Backend & API** | [🎗️ Funds Allocation API](#-funds-allocation-api-fastapi) | FastAPI, SQLAlchemy, JWT, Alembic, Pydantic | API for managing charitable projects with automatic donation distribution (FIFO), JWT authentication, and comprehensive documentation. |
 | **Web Services & API** | [🍳 Recipe Network](#-recipe-network-django-rest-framework) | Django, Django REST Framework, Djoser, PostgreSQL, Docker | Web application for publishing cooking recipes with subscriptions, favorites, and shopping lists. Backend (API) and containerization implemented. |
 | **Backend & API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API for a social network with posts, comments, subscriptions, and groups. Full JWT-based authentication. |
 | **Web Services & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 
-### 🤖 Video Analytics Bot [AI, LLM, PostgreSQL]
-
-**Intelligent Telegram bot converting natural language queries into analytical SQL queries** for a video statistics database. Uses a local LLM (Ollama + Mistral 7B) for prompt engineering and code generation.
-
-**✨ Key Features:**
-*   **NLP Interface:** Users ask questions in natural language ("How many videos have >100K views?"), the bot returns a precise numerical answer.
-*   **Local LLM:** **Mistral 7B model via Ollama** ensures complete data privacy, offline operation, and no limits/fees.
-*   **Prompt Engineering:** Detailed system prompt with database schema description, strict rules, and few-shot examples for stable SQL query generation.
-*   **Production Architecture:** Asynchronous bot on **Aiogram 3.7+**, optimized **PostgreSQL** with indexes, connection pooling via **asyncpg**.
-
-**🛠 Tech Stack:**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Aiogram](https://img.shields.io/badge/Aiogram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-3BB143?style=for-the-badge&logo=ollama&logoColor=white)
-![asyncpg](https://img.shields.io/badge/asyncpg-000000?style=for-the-badge&logo=postgresql&logoColor=white)
-
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/video_analytics_bot)
-
-
-### ✈️ Airline Sentiment Analysis Pipeline [ML, NLP, FastAPI, Streamlit]
-
-**Production-ready end-to-end ML pipeline for airline tweet sentiment classification** with confidence-aware training, explainable AI, async REST API, and interactive dashboard.
-
-**✨ Key Features:**
-*   **Confidence-Aware Training**: Sample weighting based on annotation confidence scores for more robust model learning.
-*   **Explainable Predictions**: Per-prediction insights via top contributing words and optional SHAP value visualizations.
-*   **Production REST API**: Async-safe FastAPI service with Pydantic v2 validation, thread-safe model serving, CORS support, and timeout handling.
-*   **Interactive Dashboard**: Streamlit UI for single/batch predictions with CSV/JSON export, real-time health checks, and session persistence.
-*   **Comprehensive Testing**: >90% coverage with unit/integration tests, GitHub Actions CI, security auditing via pip-audit.
-*   **Modular Architecture**: Clean separation of data loading, preprocessing, modeling, API, and dashboard layers with centralized config management.
-
-**🛠 Tech Stack:**
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
-![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis)
-
+🚀 **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
 ### 🔎 TopicLens [ML, NLP, Topic Modeling]
 
@@ -95,25 +52,49 @@
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/topic-lens) · [**🚀 Live Demo**](https://topic-lens.streamlit.app/)
 
 
-### 🌍 Polyglot Extractive Summarizer [NLP, TextRank, Streamlit]
+### ✈️ Airline Sentiment Analysis Pipeline [ML, NLP, FastAPI, Streamlit]
 
-**Lightweight multilingual extractive summarization tool powered by the TextRank algorithm.** Summarizes Wikipedia articles (by URL or title) and local `.txt` files, with a web UI and a command-line interface.
+**Production-ready end-to-end ML pipeline for airline tweet sentiment classification** with confidence-aware training, explainable AI, async REST API, and interactive dashboard.
 
 **✨ Key Features:**
-*   **Multilingual Support:** English, Russian, German, French and Spanish out of the box; a new language is added via a single mapping plus the matching NLTK resources.
-*   **Dual Input Sources:** Clean plain text fetched from Wikipedia via the MediaWiki API, or uploaded UTF-8 `.txt` files.
-*   **Flexible Length Control:** Summary size set as an absolute number of sentences or as a share of the original text.
-*   **Original Order Preservation:** Extracted sentences are restored to their source order, so the summary reads naturally.
-*   **Dual Interface:** Interactive Streamlit web app (deployed as a live demo) and a CLI for scripted use.
+*   **Confidence-Aware Training**: Sample weighting based on annotation confidence scores for more robust model learning.
+*   **Explainable Predictions**: Per-prediction insights via top contributing words and optional SHAP value visualizations.
+*   **Production REST API**: Async-safe FastAPI service with Pydantic v2 validation, thread-safe model serving, CORS support, and timeout handling.
+*   **Interactive Dashboard**: Streamlit UI for single/batch predictions with CSV/JSON export, real-time health checks, and session persistence.
+*   **Comprehensive Testing**: >90% coverage with unit/integration tests, GitHub Actions CI, security auditing via pip-audit.
+*   **Modular Architecture**: Clean separation of data loading, preprocessing, modeling, API, and dashboard layers with centralized config management.
 
 **🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![sumy](https://img.shields.io/badge/sumy_%28TextRank%29-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Wikipedia API](https://img.shields.io/badge/Wikipedia_API-000000?style=for-the-badge&logo=wikipedia&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/polyglot-extractive-summarizer) · [**🚀 Live Demo**](https://polyglot-extractive-summarizer.streamlit.app/)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis)
+
+
+### 🤖 Video Analytics Bot [AI, LLM, PostgreSQL]
+
+**Intelligent Telegram bot converting natural language queries into analytical SQL queries** for a video statistics database. Uses a local LLM (Ollama + Mistral 7B) for prompt engineering and code generation.
+
+**✨ Key Features:**
+*   **NLP Interface:** Users ask questions in natural language ("How many videos have >100K views?"), the bot returns a precise numerical answer.
+*   **Local LLM:** **Mistral 7B model via Ollama** ensures complete data privacy, offline operation, and no limits/fees.
+*   **Prompt Engineering:** Detailed system prompt with database schema description, strict rules, and few-shot examples for stable SQL query generation.
+*   **Production Architecture:** Asynchronous bot on **Aiogram 3.7+**, optimized **PostgreSQL** with indexes, connection pooling via **asyncpg**.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Aiogram](https://img.shields.io/badge/Aiogram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-3BB143?style=for-the-badge&logo=ollama&logoColor=white)
+![asyncpg](https://img.shields.io/badge/asyncpg-000000?style=for-the-badge&logo=postgresql&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/video_analytics_bot)
 
 
 ### 🔬 Embedding Visualizer [ML, NLP, Visualization]
@@ -137,6 +118,48 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/embedding-visualizer)
+
+
+### 🌍 Polyglot Extractive Summarizer [NLP, TextRank, Streamlit]
+
+**Lightweight multilingual extractive summarization tool powered by the TextRank algorithm.** Summarizes Wikipedia articles (by URL or title) and local `.txt` files, with a web UI and a command-line interface.
+
+**✨ Key Features:**
+*   **Multilingual Support:** English, Russian, German, French and Spanish out of the box; a new language is added via a single mapping plus the matching NLTK resources.
+*   **Dual Input Sources:** Clean plain text fetched from Wikipedia via the MediaWiki API, or uploaded UTF-8 `.txt` files.
+*   **Flexible Length Control:** Summary size set as an absolute number of sentences or as a share of the original text.
+*   **Original Order Preservation:** Extracted sentences are restored to their source order, so the summary reads naturally.
+*   **Dual Interface:** Interactive Streamlit web app (deployed as a live demo) and a CLI for scripted use.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![sumy](https://img.shields.io/badge/sumy_%28TextRank%29-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Wikipedia API](https://img.shields.io/badge/Wikipedia_API-000000?style=for-the-badge&logo=wikipedia&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/polyglot-extractive-summarizer) · [**🚀 Live Demo**](https://polyglot-extractive-summarizer.streamlit.app/)
+
+
+### 💰 Wallet REST API [FastAPI, PostgreSQL]
+
+**High-load asynchronous REST API for managing financial balances.** The service ensures data consistency during concurrent deposit/withdrawal operations, implementing an e-wallet pattern. *This project demonstrates my ability to write production-grade, concurrent backend code — essential for deploying ML models at scale and handling high-throughput inference workloads.*
+
+**✨ Key Features:**
+*   **Concurrency Safety:** Guarantees data integrity through `READ COMMITTED` transactions and `SELECT ... FOR UPDATE` row-level locks.
+*   **Production-Grade Stack:** Full cycle from asynchronous backend to containerization.
+*   **Deployment Ready:** Fully configured for Docker with orchestration (`docker-compose`).
+*   **Comprehensive Documentation:** Auto-generated interactive OpenAPI (Swagger) documentation at `/docs`.
+
+**🛠 Tech Stack:**
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=python&logoColor=white)
+![Alembic](https://img.shields.io/badge/Alembic-000000?style=for-the-badge&logo=alembic&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/wallet-api)
 
 
 ### 🎬 Movie Recommendation System [NLP, TF-IDF]
@@ -245,27 +268,6 @@
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/pumpkin-price-color-forecast)
 
 
-### 💰 Wallet REST API [FastAPI, PostgreSQL]
-
-**High-load asynchronous REST API for managing financial balances.** The service ensures data consistency during concurrent deposit/withdrawal operations, implementing an e-wallet pattern. *This project demonstrates my ability to write production-grade, concurrent backend code — essential for deploying ML models at scale and handling high-throughput inference workloads.*
-
-**✨ Key Features:**
-*   **Concurrency Safety:** Guarantees data integrity through `READ COMMITTED` transactions and `SELECT ... FOR UPDATE` row-level locks.
-*   **Production-Grade Stack:** Full cycle from asynchronous backend to containerization.
-*   **Deployment Ready:** Fully configured for Docker with orchestration (`docker-compose`).
-*   **Comprehensive Documentation:** Auto-generated interactive OpenAPI (Swagger) documentation at `/docs`.
-
-**🛠 Tech Stack:**
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=python&logoColor=white)
-![Alembic](https://img.shields.io/badge/Alembic-000000?style=for-the-badge&logo=alembic&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
-
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/wallet-api)
-
-
 ### 🎗️ Funds Allocation API [FastAPI, SQLAlchemy]
 
 **An API application for managing charitable projects and automatically distributing donations.** The system implements a FIFO (First In, First Out) algorithm for fair distribution of funds among projects.
@@ -344,8 +346,6 @@
 ![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=for-the-badge&logo=jinja&logoColor=white)
 
 [**📂 Project Repository**](https://github.com/IlyaShaposhnikov/shortlink_generator)
-
-
 🔙 **[Key Projects](README.md#-key-projects)**
 
 🇷🇺 **[Russian Version / На русском](README.full.ru.md)**
