@@ -8,9 +8,25 @@
 
 ## Почему NLP и ML?
 
-Мой путь в ML был нестандартным, и именно это стало моим преимуществом. Имея бэкграунд в **лингвистике и восточных языках**, я более **12 лет** работал с языковыми данными в международной корпорации: управлял NMT-воркфлоу, CAT-системами, терминологическими базами и переводческой памятью. Я видел, как обрабатываются языковые данные, где возникают лингвистические _bottlenecks_, и как автоматизация экономит тысячи часов.
+Мой путь в ML был нестандартным, и именно это стало моим преимуществом. Имея бэкграунд в **лингвистике и восточных языках**, я более **12 лет** работал с языковыми данными в международной корпорации: управлял NMT-воркфлоу, CAT-системами, терминологическими базами и переводческой памятью. Я видел, как обрабатываются языковые данные, где возникают лингвистические _«узкие места»_, и как автоматизация экономит тысячи часов.
 
 Это глубокое понимание того, как работает язык — от морфологии до семантики — закономерно привело меня в машинное обучение. Сегодня я сочетаю это лингвистическое чутье с современным ML-инжинирингом, чтобы создавать системы, которые по-настоящему понимают человеческий язык.
+
+## 🚀 Ключевые проекты
+
+| Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
+| :--- | :--- | :--- | :--- |
+| **NLP-исследование** | [🔎 TopicLens](README.full.ru.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Live-демо с ежемесячным автообновлением, 280+ тестов. |
+| **NLP-пайплайн** | [✈️ Airline Sentiment Analysis](README.full.ru.md#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | Сквозной пайплайн классификации тональности с обучением с учетом уверенности разметчиков, объяснимыми предсказаниями (SHAP), production REST API и CI с покрытием тестами >90%. |
+| **LLM-приложение** | [🤖 Video Analytics Bot](README.full.ru.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
+| **NLP-исследование** | [🔬 Embedding Visualizer](README.full.ru.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для семантического анализа эмбеддингов с визуализацией аналогий через векторные стрелки, проекцией кластеров (PCA/t-SNE) и оценкой качества на Google Analogy Test Set. |
+| **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](README.full.ru.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с live-демо и CLI. |
+| **Backend и API** | [💰 Wallet REST API](README.full.ru.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Высоконагруженное асинхронное API для финансовых операций с гарантией консистентности данных при конкурентных запросах. |
+
+▶️ **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+
+📚 **[Полный список проектов](README.full.ru.md)** — все проекты с подробными описаниями
+
 
 ## 🛠 Технологический стек
 
@@ -23,12 +39,12 @@
 | **API и безопасность** | ![REST API](https://img.shields.io/badge/REST_API-FF6C37?logo=postman&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-000000?logo=json-web-tokens&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white) |
 
 ## 🗣️ [Естественные] языки
-*   🇷🇺 **Русский:** Родной
-*   🇬🇧 **Английский:** C2 (В совершенстве)
-*   🇪🇸 **Испанский:** C1 (Продвинутый)
-*   🇫🇷 **Французский:** B2 (Средне-продвинутый)
-*   🇩🇪 **Немецкий:** B1 (Средний)
-*   🇸🇦 **Арабский:** B1 (Средний)
+*   🇷🇺  **Русский:** Родной
+*   🇬🇧  **Английский:** C2 (В совершенстве)
+*   🇪🇸  **Испанский:** C1 (Продвинутый)
+*   🇫🇷  **Французский:** B2 (Средне-продвинутый)
+*   🇩🇪  **Немецкий:** B1 (Средний)
+*   🇸🇦  **Арабский:** B1 (Средний)
 
 *Мультиязычность дает мне практическое преимущество в NLP — я на практике понимаю морфологию, синтаксис и семантику разных языковых семей.*
 
@@ -43,18 +59,4 @@
 
 **💼 LinkedIn:** [@iliashaposhnikov](https://linkedin.com/in/iliashaposhnikov)
 
-
-## 🚀 Ключевые проекты
-
-| Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
-| :--- | :--- | :--- | :--- |
-| **ML/NLP-исследование** | [🔎 TopicLens](README.full.ru.md#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Live-демо с ежемесячным автообновлением, 280+ тестов. |
-| **ML/NLP пайплайн** | [✈️ Airline Sentiment Analysis](README.full.ru.md#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | Сквозной пайплайн классификации тональности с обучением с учетом уверенности разметчиков, объяснимыми предсказаниями (SHAP), production REST API и CI с покрытием тестами >90%. |
-| **AI и LLM** | [🤖 Video Analytics Bot](README.full.ru.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
-| **ML и NLP** | [🔬 Embedding Visualizer](README.full.ru.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для семантического анализа эмбеддингов с визуализацией аналогий через векторные стрелки, проекцией кластеров (PCA/t-SNE) и оценкой качества на Google Analogy Test Set. |
-| **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](README.full.ru.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с live-демо и CLI. |
-| **Production Backend** | [💰 Wallet REST API](README.full.ru.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Высоконагруженное асинхронное API для финансовых операций с гарантией консистентности данных при конкурентных запросах. |
-
-🚀 **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
-
-📚 **[Полный список проектов](README.full.ru.md)** — все проекты с подробными описаниями
+🇬🇧 **[English Version / На английском](README.md)**
