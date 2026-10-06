@@ -21,7 +21,7 @@
 | **LLM-приложение** | [🤖 Video Analytics Bot](README.full.ru.md#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
 | **NLP-исследование** | [🔬 Embedding Visualizer](README.full.ru.md#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для семантического анализа эмбеддингов с визуализацией аналогий через векторные стрелки, проекцией кластеров (PCA/t-SNE) и оценкой качества на Google Analogy Test Set. |
 | **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](README.full.ru.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с демо и CLI. |
-| **Backend и API** | [💰 Wallet REST API](README.full.ru.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Асинхронный API для финансовых операций с гарантией консистентности данных при конкурентных запросах. |
+| **Backend и API** | [💰 Wallet REST API](README.full.ru.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Асинхронный API для финансовых операций с гарантией консистентности данных при конкурентных запросах. *Бэкенд-основа для обслуживания ML-моделей под конкурентной нагрузкой.* |
 
 ▶️ **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
