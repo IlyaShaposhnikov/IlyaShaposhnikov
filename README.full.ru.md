@@ -9,7 +9,7 @@
 | Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
 | :--- | :--- | :--- | :--- |
 | **NLP-исследование** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Демо с ежемесячным автообновлением, 280+ тестов. |
-| **NLP-пайплайн** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | Сквозной пайплайн классификации тональности с обучением с учетом уверенности разметчиков, объяснимыми предсказаниями (SHAP), production REST API и CI с покрытием тестами >90%. |
+| **NLP-пайплайн** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | scikit-learn, PyTorch, Sentence-Transformers, FastAPI, Streamlit, SHAP | TF-IDF против sentence-эмбеддингов × логистическая регрессия против MLP на PyTorch на 5 сидах: эмбеддинги дают +2–3 п.п. macro-F1 ценой ~40× задержки. Обучение с учетом уверенности разметчиков, SHAP-объяснения, REST API, дашборд для сравнения моделей. Демо, 290+ тестов. |
 | **LLM-приложение** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
 | **NLP-исследование** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Интерактивный инструмент для семантического анализа эмбеддингов с визуализацией аналогий через векторные стрелки, проекцией кластеров (PCA/t-SNE) и оценкой качества на Google Analogy Test Set. |
 | **NLP-приложение** | [🌍 Polyglot Extractive Summarizer](#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Мультиязычный (5 языков) экстрактивный суммаризатор статей Википедии и локальных файлов с гибкой настройкой длины, веб-интерфейсом на Streamlit с демо и CLI. |
@@ -24,7 +24,7 @@
 | **Backend и API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API для социальной сети с постами, комментариями, подписками и группами. Полная аутентификация через JWT. |
 | **Backend и API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
 
-▶️ **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
 ## 📖 Подробное описание проектов
 
@@ -56,27 +56,32 @@
 
 ### ✈️ Airline Sentiment Analysis Pipeline [ML, NLP, FastAPI, Streamlit]
 
-**Production-ready сквозной ML-пайплайн для классификации тональности твитов об авиакомпаниях** с обучением с учетом уверенности аннотаций, объяснимым ИИ, асинхронным REST API и интерактивной панелью управления.
+**Сквозной ML/NLP-пайплайн классификации тональности твитов об авиакомпаниях, в котором TF-IDF и sentence-эмбеддинги сравниваются в связке с логистической регрессией и MLP на PyTorch на пяти сидах**, — с обучением с учетом уверенности разметчиков, объяснимыми предсказаниями, REST API и дашбордом для сравнения моделей, развернутым как демо.
 
 **✨ Ключевые особенности:**
-*   **Обучение с учетом уверенности**: Взвешивание примеров на основе баллов уверенности разметчиков для более надежного обучения модели.
-*   **Объяснимые предсказания**: Интерпретация отдельных предсказаний через топ-слова с наибольшим вкладом и опциональную визуализацию SHAP-значений.
-*   **Production-ready REST API**: Асинхронно-безопасный сервис на FastAPI с валидацией через Pydantic v2, потокобезопасным обслуживанием модели, поддержкой CORS и обработкой таймаутов.
-*   **Интерактивный дашборд**: Веб-интерфейс на Streamlit для одиночных и пакетных предсказаний с экспортом в CSV/JSON, проверкой доступности API (health check) в реальном времени и сохранением состояния сессии.
-*   **Комплексное тестирование**: Покрытие тестами >90% с юнит- и интеграционными тестами, CI через GitHub Actions, аудит безопасности через pip-audit.
-*   **Модульная архитектура**: Четкое разделение ответственности между слоями загрузки данных, предобработки, моделирования, API и дашборда с централизованным управлением конфигурацией.
+*   **Воспроизводимое сравнение подходов:** 2 способа представления текста × 2 классификатора на 5 стратифицированных разбиениях (в каждом сиде все четыре конфигурации используют одно разбиение и одни веса уверенности). Sentence-эмбеддинги (`all-MiniLM-L6-v2`) превосходят TF-IDF с любым классификатором: macro-F1 0.805 против 0.785 для 3 классов и 0.916 против 0.888 для бинарной задачи — два-три стандартных отклонения, стабильно по всем сидам.
+*   **Анализ компромиссов, а не просто таблица лидеров:** При хороших признаках MLP ничего не добавляет к логистической регрессии; эмбеддинги стоят ~40× задержки на запрос (≈15 мс против 0.4 мс), требуют torch и модель на 90 МБ и лишают пословных объяснений. Итог: TF-IDF + LogReg остается быстрым и объяснимым вариантом по умолчанию, эмбеддинги — выбор, когда точность важнее задержки.
+*   **Обучение с учетом уверенности:** Веса примеров по баллам уверенности разметчиков, в том числе в MLP на PyTorch с ранней остановкой.
+*   **Без утечек по построению:** Векторизатор обучается только на обучающей выборке; очистка текста встроена в векторизатор, поэтому при обучении и инференсе текст обрабатывается одинаково — это закреплено регрессионными тестами на утечку данных и расхождение train/serve.
+*   **Объяснимые предсказания:** Топ-слова с наибольшим вкладом по классам и для отдельных предсказаний через веса модели или SHAP (ленивый импорт с запасным вариантом); для моделей на эмбеддингах и MLP автоматически отключаются.
+*   **Production-ready REST API:** Асинхронно-безопасный сервис на FastAPI с валидацией через Pydantic v2, потокобезопасным обслуживанием модели, CORS и таймаутами; `/health` сообщает, какая модель обслуживается и умеет ли она объяснять, `MODEL_PATH` задает бандл.
+*   **Дашборд для сравнения моделей и демо:** Интерфейс на Streamlit переключается между шестью обученными моделями; вкладка *Compare Models* прогоняет один текст через все модели (предсказание, уверенность, задержка) — на смешанном твите модели на TF-IDF отвечают «негатив», а модели на эмбеддингах — «позитив», то есть разделение идет по представлению текста, а не по классификатору. Развернут на Streamlit Community Cloud.
+*   **Тестирование и CI:** 290+ юнит- и интеграционных тестов (фейковый sentence-энкодер, поэтому CI не скачивает модели), GitHub Actions на Python 3.10–3.12, аудит безопасности через `pip-audit`, Codecov.
 
 **🛠 Стек технологий:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Sentence-Transformers](https://img.shields.io/badge/Sentence--Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![SHAP](https://img.shields.io/badge/SHAP-FF8C00?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis)
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis) · [**▶️ Демо**](https://airline-sentiment-lab.streamlit.app/)
 
 
 ### 🤖 Video Analytics Bot [AI, LLM, PostgreSQL]
