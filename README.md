@@ -24,7 +24,7 @@ This deep understanding of how language works — from morphology to semantics �
 | **NLP Application** | [🌍 Polyglot Extractive Summarizer](README.full.md#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
 | **Backend & API** | [💰 Wallet REST API](README.full.md#-wallet-rest-api-fastapi-postgresql) | FastAPI, PostgreSQL, Docker, async | Asynchronous API for financial operations with guaranteed data consistency under concurrent requests (transactions, row-level locks). *Backend groundwork for serving ML models under concurrent load.* |
 
-▶️ **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Lab](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
 📚 **[Full Project List](README.full.md)** — all projects with detailed descriptions
 
