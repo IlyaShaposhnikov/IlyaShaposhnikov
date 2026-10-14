@@ -9,7 +9,7 @@
 | Category | Project | Key Technologies | Core Concept & Challenges |
 | :--- | :--- | :--- | :--- |
 | **NLP Research** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
-| **NLP Pipeline** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | FastAPI, Streamlit, scikit-learn, SHAP, pytest | End-to-end sentiment classification with confidence-weighted training, explainable predictions (SHAP), production REST API, and CI with >90% test coverage. |
+| **NLP Pipeline** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | scikit-learn, PyTorch, Sentence-Transformers, FastAPI, Streamlit, SHAP | TF-IDF vs sentence embeddings × logistic regression vs PyTorch MLP over 5 seeds: embeddings add +2–3 pp macro-F1 at ~40× latency. Confidence-weighted training, SHAP explanations, REST API, multi-model dashboard. Live demo, 290+ tests. |
 | **LLM Application** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
 | **NLP Research** | [🔬 Embedding Visualizer](#-embedding-visualizer-ml-nlp-visualization) | Gensim, scikit-learn, Matplotlib | Interactive toolkit for semantic analysis of word embeddings with vector-arrow analogy visualization, PCA/t-SNE cluster projection, and Google Analogy Test Set evaluation. |
 | **NLP Application** | [🌍 Polyglot Extractive Summarizer](#-polyglot-extractive-summarizer-nlp-textrank-streamlit) | sumy (TextRank), NLTK, Streamlit, wikipedia-api | Multilingual (5 languages) extractive summarizer for Wikipedia articles and local files with flexible length control, Streamlit web UI with live demo, and CLI. |
@@ -24,7 +24,7 @@
 | **Backend & API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API for a social network with posts, comments, subscriptions, and groups. Full JWT-based authentication. |
 | **Backend & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 
-▶️ **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
 ## 📖 Project Details
 
@@ -56,27 +56,32 @@
 
 ### ✈️ Airline Sentiment Analysis Pipeline [ML, NLP, FastAPI, Streamlit]
 
-**Production-ready end-to-end ML pipeline for airline tweet sentiment classification** with confidence-aware training, explainable AI, async REST API, and interactive dashboard.
+**End-to-end ML/NLP pipeline for airline tweet sentiment that compares TF-IDF and sentence embeddings with logistic regression and a PyTorch MLP over five seeds** — with confidence-aware training, explainable predictions, a REST API, and a multi-model dashboard running as a live demo.
 
 **✨ Key Features:**
-*   **Confidence-Aware Training**: Sample weighting based on annotation confidence scores for more robust model learning.
-*   **Explainable Predictions**: Per-prediction insights via top contributing words and optional SHAP value visualizations.
-*   **Production REST API**: Async-safe FastAPI service with Pydantic v2 validation, thread-safe model serving, CORS support, and timeout handling.
-*   **Interactive Dashboard**: Streamlit UI for single/batch predictions with CSV/JSON export, real-time health checks, and session persistence.
-*   **Comprehensive Testing**: >90% coverage with unit/integration tests, GitHub Actions CI, security auditing via pip-audit.
-*   **Modular Architecture**: Clean separation of data loading, preprocessing, modeling, API, and dashboard layers with centralized config management.
+*   **Reproducible Approach Comparison:** 2 feature extractors × 2 classifiers on 5 stratified splits (each seed shares one split and the same confidence weights across all four configurations). Sentence embeddings (`all-MiniLM-L6-v2`) beat TF-IDF with either classifier: macro-F1 0.805 vs 0.785 for 3 classes and 0.916 vs 0.888 for binary — two to three standard deviations, consistent across seeds.
+*   **Trade-off Analysis, Not Just a Leaderboard:** The MLP adds nothing over logistic regression once features are good; embeddings cost ~40× latency per request (≈15 ms vs 0.4 ms), need torch plus a 90 MB model, and lose word-level explanations. Result: TF-IDF + LogReg stays the fast, explainable default; embeddings are the pick when accuracy outweighs latency.
+*   **Confidence-Aware Training:** Sample weights from annotator confidence scores, also in the PyTorch MLP with early stopping.
+*   **Leak-Free by Design:** Vectorizer fitted on the training split only; text cleaning lives inside the vectorizer, so training and inference process text identically — guarded by regression tests for data leakage and train/serve skew.
+*   **Explainable Predictions:** Top contributing words per class and per prediction via model weights or SHAP (lazy import with fallback); automatically disabled for embedding and MLP models.
+*   **Production REST API:** Async-safe FastAPI service with Pydantic v2 validation, thread-safe model serving, CORS and timeouts; `/health` reports the served model and whether it can explain, `MODEL_PATH` selects the bundle.
+*   **Multi-Model Dashboard & Live Demo:** Streamlit UI switches between six trained models; the *Compare Models* tab runs one text through all of them (prediction, confidence, latency) — on a mixed tweet, TF-IDF models answer negative and embedding models positive, so the split follows the representation, not the classifier. Hosted on Streamlit Community Cloud.
+*   **Testing & CI:** 290+ unit and integration tests (a fake sentence encoder, so CI downloads no models), GitHub Actions on Python 3.10–3.12, `pip-audit` security checks, Codecov.
 
 **🛠 Tech Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Sentence-Transformers](https://img.shields.io/badge/Sentence--Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![SHAP](https://img.shields.io/badge/SHAP-FF8C00?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![NLTK](https://img.shields.io/badge/NLTK-3BB143?style=for-the-badge&logo=python&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis)
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/airline-sentiment-analysis) · [**▶️ Live Demo**](https://airline-sentiment-lab.streamlit.app/)
 
 
 ### 🤖 Video Analytics Bot [AI, LLM, PostgreSQL]
