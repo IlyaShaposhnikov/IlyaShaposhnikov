@@ -8,6 +8,7 @@
 
 | Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
 | :--- | :--- | :--- | :--- |
+| **NLP и семантический поиск** | [🧭 TriageLens](#-triagelens-ml-nlp-semantic-search) | Transformers (DistilBERT), Sentence-Transformers, Chroma, BM25, scikit-learn, Streamlit | Классификация типа и поиск дубликатов на 38 тыс. живых GitHub issues (uv, pandas): векторный поиск (bge-small) находит оригинал в топ-10 для 52–58% дубликатов против 27–33% у BM25; сравнение дообученного DistilBERT, TF-IDF и zero-shot с устранением утечки метки и разбиением по времени. Демо с еженедельным обновлением индекса, 140+ тестов. |
 | **NLP-исследование** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Демо с ежемесячным автообновлением, 280+ тестов. |
 | **NLP-пайплайн** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | scikit-learn, PyTorch, Sentence-Transformers, FastAPI, Streamlit, SHAP | TF-IDF против sentence-эмбеддингов × логистическая регрессия против MLP на PyTorch на 5 сидах: эмбеддинги дают +2–3 п.п. macro-F1 ценой ~40× задержки. Обучение с учетом уверенности разметчиков, SHAP-объяснения, REST API, дашборд для сравнения моделей. Демо, 290+ тестов. |
 | **LLM-приложение** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | Бот с NLP-интерфейсом: преобразует запросы на естественном языке в SQL-аналитику с использованием локальной LLM (Mistral 7B), промпт-инжиниринга и few-shot примеров. |
@@ -24,9 +25,28 @@
 | **Backend и API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API для социальной сети с постами, комментариями, подписками и группами. Полная аутентификация через JWT. |
 | **Backend и API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Реализована валидация, поддержка кастомных идентификаторов и хранение истории в БД. |
 
-▶️ **Демо:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Демо:** [🧭 TriageLens](https://triage-lens.streamlit.app/) · [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
 ## 📖 Подробное описание проектов
+
+### 🧭 TriageLens [ML, NLP, Semantic Search]
+
+**Триаж GitHub issues — что это за issue и не сообщали ли о нем раньше? — построенный и проверенный на 38 тыс. живых issues проектов `astral-sh/uv` и `pandas-dev/pandas`.** Сравнивает классические, эмбеддинговые, дообученные и zero-shot классификаторы типа issue, а также поиск по ключевым словам, векторный и гибридный поиск дубликатов. Включает демо, индекс которого сам обновляется каждую неделю.
+
+**✨ Ключевые особенности:**
+*   **Семантический поиск дубликатов:** Каждый дубликат — запрос ко всем более ранним issues. Векторный поиск на `bge-small` находит оригинал в топ-10 для 52% (uv) и 58% (pandas) дубликатов против 27% и 33% у BM25. Кодировщик того же размера, обученный для поиска, обходит MiniLM на +7,4–7,6 п.п. recall@10; гибрид RRF с BM25 ухудшает результат; Chroma (HNSW) совпадает с точным поиском в пределах 0,2 п.п.
+*   **Честное сравнение классификаторов:** Бейзлайн «доверять форме», TF-IDF + LogReg, замороженные эмбеддинги MiniLM, дообученный DistilBERT (Kaggle T4, взвешивание классов, ранняя остановка) и zero-shot BART-MNLI — на одном разбиении по времени, с 95% бутстрэп-интервалами для accuracy и macro-F1. DistilBERT лучший, на 2–4 п.п. выше TF-IDF; zero-shot на pandas хуже самого частого класса.
+*   **Отрицательные результаты без прикрас:** Формы issues уже дают верный тип в 82–92% случаев, и ни одна модель их не превосходит; модели окупаются на issues без формы (+34–42 п.п. точности). Одни и те же эмбеддинги проигрывают в классификации, но выигрывают в поиске: они кодируют тему, а не намерение автора.
+*   **Данные без утечек:** Следы форм issues (префиксы заголовков, заголовки разделов, чекбоксы, вывод версий) удаляются; выбранная автором форма хранится в отдельной колонке и никогда не подается модели; разбиение train/validation/test по времени (70/15/15).
+*   **Эталон, проверенный вручную:** Пары «дубликат → оригинал» извлекаются из комментариев и событий истории упорядоченными правилами; их точность проверена вручную на стратифицированной выборке (93% uv, 99% pandas) с интервалами через апостериорные распределения Джеффриса.
+*   **Надежный сбор данных:** GitHub GraphQL API с докачкой по курсору и обработкой лимитов — вместо пагинации REST, которая молча теряла почти четверть issues pandas.
+*   **Демо и автоматизация:** Поисковый индекс публикуется на Hugging Face Hub; еженедельный воркфлоу GitHub Actions догружает новые и измененные issues, перекодирует только изменившиеся тексты, проверяет индекс и публикует его. 140+ тестов без сети и GPU, CI на Python 3.11/3.12, lock-файл для воспроизводимости.
+
+**🛠 Стек технологий:**
+(те же бейджи, что в EN-версии)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/triage-lens) · [**▶️ Демо**](https://triage-lens.streamlit.app/) · [**🤗 Датасет**](https://huggingface.co/datasets/IlyaShaposhnikov/triage-lens-demo)
+
 
 ### 🔎 TopicLens [ML, NLP, Topic Modeling]
 
