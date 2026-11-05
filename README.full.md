@@ -8,6 +8,7 @@
 
 | Category | Project | Key Technologies | Core Concept & Challenges |
 | :--- | :--- | :--- | :--- |
+| **NLP & Semantic Search** | [🧭 TriageLens](#-triagelens-ml-nlp-semantic-search) | Transformers (DistilBERT), Sentence-Transformers, Chroma, BM25, scikit-learn, Streamlit | Issue-type classification and duplicate search on 38K live GitHub issues (uv, pandas): dense retrieval (bge-small) finds the original in the top 10 for 52–58% of duplicates vs 27–33% for BM25; fine-tuned DistilBERT vs TF-IDF vs zero-shot with leakage removal and a time-based split. Live demo with weekly index refresh, 140+ tests. |
 | **NLP Research** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
 | **NLP Pipeline** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | scikit-learn, PyTorch, Sentence-Transformers, FastAPI, Streamlit, SHAP | TF-IDF vs sentence embeddings × logistic regression vs PyTorch MLP over 5 seeds: embeddings add +2–3 pp macro-F1 at ~40× latency. Confidence-weighted training, SHAP explanations, REST API, multi-model dashboard. Live demo, 290+ tests. |
 | **LLM Application** | [🤖 Video Analytics Bot](#-video-analytics-bot-ai-llm-postgresql) | Aiogram, Ollama (LLM), PostgreSQL, asyncpg | NLP-powered bot: transforms natural language queries into SQL analytics using a local LLM (Mistral 7B) with prompt engineering and few-shot examples. |
@@ -24,9 +25,38 @@
 | **Backend & API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API for a social network with posts, comments, subscriptions, and groups. Full JWT-based authentication. |
 | **Backend & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 
-▶️ **Live Demos:** [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Live Demos:** [🧭 TriageLens](https://triage-lens.streamlit.app/) · [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
 ## 📖 Project Details
+
+### 🧭 TriageLens [ML, NLP, Semantic Search]
+
+**Triage for GitHub issues — what kind of issue is this, and has it been reported before? — built and evaluated on 38K live issues from `astral-sh/uv` and `pandas-dev/pandas`.** Compares classical, embedding-based, fine-tuned and zero-shot classifiers for issue type, and keyword, dense and hybrid retrieval for duplicate search, with a live demo whose index refreshes itself every week.
+
+**✨ Key Features:**
+*   **Semantic Duplicate Search:** Each duplicate queries all earlier issues. Dense retrieval with `bge-small` puts the original in the top 10 for 52% (uv) and 58% (pandas) of duplicates, against 27% and 33% for BM25. A retrieval-trained encoder beats MiniLM of the same size by +7.4–7.6 pp recall@10; hybrid RRF with BM25 hurts; Chroma (HNSW) matches exact search within 0.2 pp.
+*   **Fairly Scored Classifier Comparison:** Trust-the-form baseline, TF-IDF + LogReg, frozen MiniLM embeddings, fine-tuned DistilBERT (Kaggle T4, class-weighted loss, early stopping) and zero-shot BART-MNLI, all on one time-based split with bootstrap 95% intervals for accuracy and macro-F1. DistilBERT is best, 2–4 pp above TF-IDF; zero-shot falls below the majority class on pandas.
+*   **Honest Negative Results:** Issue forms already pick the right type 82–92% of the time and no model beats them; models pay off on issues filed without a form (+34–42 pp accuracy). The same embeddings lose at classification but win at retrieval: they encode the topic, not the author's intent.
+*   **Leak-Free Data:** Label traces left by issue forms (title prefixes, section headings, checkboxes, version dumps) are removed; the author's chosen form is kept in a separate column that is never a model input; train/validation/test split by time (70/15/15).
+*   **Hand-Validated Ground Truth:** "Duplicate → original" pairs mined from comments and timeline events by ordered rules; precision checked by hand on a stratified sample (93% uv, 99% pandas) with Jeffreys-posterior intervals.
+*   **Resilient Data Collection:** GitHub GraphQL API with resumable cursors and rate-limit handling, replacing REST pagination that silently lost almost a quarter of pandas issues.
+*   **Live Demo & Automation:** Search index published to Hugging Face Hub; a weekly GitHub Actions workflow fetches new and changed issues, re-encodes only changed texts, smoke-tests the index and publishes it. 140+ tests with no network or GPU, CI on Python 3.11/3.12, pinned lock file for reproducibility.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Transformers](https://img.shields.io/badge/Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![Sentence-Transformers](https://img.shields.io/badge/Sentence--Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Chroma](https://img.shields.io/badge/Chroma-FF6446?style=for-the-badge&logo=python&logoColor=white)
+![Hugging Face Hub](https://img.shields.io/badge/Hugging_Face_Hub-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/triage-lens) · [**▶️ Live Demo**](https://triage-lens.streamlit.app/) · [**🤗 Dataset**](https://huggingface.co/datasets/IlyaShaposhnikov/triage-lens-demo)
+
 
 ### 🔎 TopicLens [ML, NLP, Topic Modeling]
 
