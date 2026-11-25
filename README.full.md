@@ -8,6 +8,7 @@
 
 | Category | Project | Key Technologies | Core Concept & Challenges |
 | :--- | :--- | :--- | :--- |
+| **LLM & RAG** | [🔤 GlottoLens](#-glottolens-llm-rag-langchain) | Alice AI (Yandex AI Studio), LangChain, SQLite FTS5 (BM25), embeddings, Streamlit | RAG over three typological databases (Grambank, WALS, Glottolog): ask about a language's grammar in any language and get an answer where every statement cites a database record, with citations checked by code. Hybrid BM25 + embeddings retrieval with reserved slots (beat RRF), LangChain retriever and LCEL chain; on held-out questions 32/32 features found, 23/23 values right, 25/25 answers in the question's language across 10 languages; 5 LLMs compared. Live demo. |
 | **NLP & Semantic Search** | [🧭 TriageLens](#-triagelens-ml-nlp-semantic-search) | Transformers (DistilBERT), Sentence-Transformers, Chroma, BM25, scikit-learn, Streamlit | Issue-type classification and duplicate search on 38K live GitHub issues (uv, pandas): dense retrieval (bge-small) finds the original in the top 10 for 52–58% of duplicates vs 27–33% for BM25; fine-tuned DistilBERT vs TF-IDF vs zero-shot with leakage removal and a time-based split. Live demo with weekly index refresh, 140+ tests. |
 | **NLP Research** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Comparative study of LDA, NMF and LSA on 20K arXiv abstracts (2018–2026): coherence, topic diversity and agreement with real categories, Hungarian topic matching across models, 8-year topic dynamics. Live demo with monthly auto-refresh, 280+ tests. |
 | **NLP Pipeline** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | scikit-learn, PyTorch, Sentence-Transformers, FastAPI, Streamlit, SHAP | TF-IDF vs sentence embeddings × logistic regression vs PyTorch MLP over 5 seeds: embeddings add +2–3 pp macro-F1 at ~40× latency. Confidence-weighted training, SHAP explanations, REST API, multi-model dashboard. Live demo, 290+ tests. |
@@ -25,9 +26,35 @@
 | **Backend & API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API for a social network with posts, comments, subscriptions, and groups. Full JWT-based authentication. |
 | **Backend & API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Web service with REST API for generating short URLs. Features validation, custom identifier support, and history tracking in a database. |
 
-▶️ **Live Demos:** [🧭 TriageLens](https://triage-lens.streamlit.app/) · [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Live Demos:** [🔤 GlottoLens](https://glotto-lens.streamlit.app/) · [🧭 TriageLens](https://triage-lens.streamlit.app/) · [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
 ## 📖 Project Details
+
+### 🔤 GlottoLens [LLM, RAG, LangChain]
+
+**Retrieval-augmented generation over three open linguistic databases — Grambank, WALS and Glottolog: ask about the grammar of a language, in English or another language, and get a short answer in which every statement cites a database record.** The model never answers from its own knowledge: it gets the recorded values and passages, cites them by label and says so when the data is missing; invented labels are detected in code. Live demo with clickable citations and the evidence behind each answer.
+
+**✨ Key Features:**
+*   **Cited Answers, Verified in Code:** Every statement links to an exact WALS datapoint or Grambank valueset; a citation check flags labels that are not in the evidence; the answer prompt treats "no value recorded" as missing data, not as absence of the feature.
+*   **Language-Aware Retrieval:** An LLM rewrite step maps everyday wording to database terminology ("is there a word like 'the'" → "definite articles") and extracts the language; lookup over Glottolog names, ISO and WALS codes and dialects, with dialect fallback; SQLite FTS5 (BM25) ranks features rather than documents, which fixed most early failures.
+*   **Hybrid Search, Measured:** Yandex embeddings (256 dimensions, stored in the same SQLite file) join through reserved slots: BM25 keeps the first 6 places, vectors get 2 for features BM25 missed. Reciprocal rank fusion was tested and lost (38/41 vs 41/41).
+*   **Rigorous Evaluation:** 41 tuning and 32 held-out questions about 54 languages; expected values are read from the database, never written by hand; held-out sets committed before their first run; every report records the git commit, data releases and hashes of prompts, questions and metric code. Tuning set with hybrid search: 41/41 features found, 33/33 values cited correctly, 8/8 honest no-data answers, 0 invalid citations; held-out: 32/32 and 23/23.
+*   **Honest Limits:** An LLM judge cross-checks the code-based metrics and every disagreement is read by hand; the held-out honesty score is reported as 6/9 instead of being tuned away.
+*   **Answers in the Question's Language:** A Spanish question about Russian once got a Russian answer; code now detects the question's language for 12 languages by script or function words and falls back to the model — 25/25 on held-out questions in 10 languages (21/25 before the fix).
+*   **Answer Model Comparison:** Five Yandex AI Studio models (Alice AI, Alice AI Flash, YandexGPT 5.1 Pro, DeepSeek V4.1 Flash, Qwen3.6) on identical evidence land within one answer of each other; reasoning changed no verdict at 2.5× the output tokens.
+*   **Engineering:** Pinned CLDF releases built atomically into one SQLite database; disk cache and token log for LLM calls; LangChain `BaseRetriever` and LCEL chain that send the same prompts as the CLI (checked by a test); Streamlit demo in public mode where visitors use their own API key, which is never stored; network-free pytest suite and CI with ruff.
+
+**🛠 Tech Stack:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![Yandex AI Studio](https://img.shields.io/badge/Yandex_AI_Studio-5282FF?style=for-the-badge&logo=yandexcloud&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite_FTS5-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+[**📂 Project Repository**](https://github.com/IlyaShaposhnikov/glotto-lens) · [**▶️ Live Demo**](https://glotto-lens.streamlit.app/)
+
 
 ### 🧭 TriageLens [ML, NLP, Semantic Search]
 
