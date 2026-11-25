@@ -8,6 +8,7 @@
 
 | Категория | Проект | Ключевые технологии | Суть и ключевые задачи |
 | :--- | :--- | :--- | :--- |
+| **LLM и RAG** | [🔤 GlottoLens](#-glottolens-llm-rag-langchain) | Алиса AI (Yandex AI Studio), LangChain, SQLite FTS5 (BM25), эмбеддинги, Streamlit | RAG по трем типологическим базам (Grambank, WALS, Glottolog): на вопрос о грамматике языка, заданный на любом языке, приходит ответ, где каждое утверждение ссылается на запись в базе, а ссылки проверяет код. Гибридный поиск BM25 + эмбеддинги с зарезервированными местами (обошел RRF), ретривер и LCEL-цепочка LangChain; на отложенных вопросах найдено 32/32 признака, верно 23/23 значения, 25/25 ответов на языке вопроса (10 языков); сравнение 5 LLM. Демо. |
 | **NLP и семантический поиск** | [🧭 TriageLens](#-triagelens-ml-nlp-semantic-search) | Transformers (DistilBERT), Sentence-Transformers, Chroma, BM25, scikit-learn, Streamlit | Классификация типа и поиск дубликатов на 38 тыс. реальных GitHub issues (uv, pandas): векторный поиск (bge-small) находит оригинал в топ-10 для 52–58% дубликатов против 27–33% у BM25; сравнение дообученного DistilBERT, TF-IDF и zero-shot без утечки метки и с разбиением по времени. Демо с еженедельным обновлением индекса, 140+ тестов. |
 | **NLP-исследование** | [🔎 TopicLens](#-topiclens-ml-nlp-topic-modeling) | scikit-learn, NLTK, Plotly, Streamlit, pytest | Сравнение LDA, NMF и LSA на 20 тыс. аннотаций arXiv (2018–2026): когерентность, разнообразие тем и согласие с реальными категориями, сопоставление тем между моделями венгерским алгоритмом, динамика тем за 8 лет. Демо с ежемесячным автообновлением, 280+ тестов. |
 | **NLP-пайплайн** | [✈️ Airline Sentiment Analysis](#%EF%B8%8F-airline-sentiment-analysis-pipeline-ml-nlp-fastapi-streamlit) | scikit-learn, PyTorch, Sentence-Transformers, FastAPI, Streamlit, SHAP | TF-IDF против sentence-эмбеддингов × логистическая регрессия против MLP на PyTorch на 5 случайных разбиениях: эмбеддинги дают +2–3 п.п. macro-F1 ценой ~40× задержки. Взвешивание примеров по уверенности разметчиков, SHAP-объяснения, REST API, дашборд для сравнения моделей. Демо, 290+ тестов. |
@@ -25,9 +26,35 @@
 | **Backend и API** | [👥 Social Network API](#-social-network-api-django-rest-framework) | Django, Django REST Framework, JWT, SQLite | REST API для социальной сети с постами, комментариями, подписками и группами. Полная аутентификация через JWT. |
 | **Backend и API** | [🔗 URL Shortener Service](#-url-shortener-service-flask-rest-api) | Flask, SQLAlchemy, REST API, Alembic | Веб-сервис с REST API для генерации коротких ссылок. Валидация, пользовательские идентификаторы и хранение истории в БД. |
 
-▶️ **Демо:** [🧭 TriageLens](https://triage-lens.streamlit.app/) · [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
+▶️ **Демо:** [🔤 GlottoLens](https://glotto-lens.streamlit.app/) · [🧭 TriageLens](https://triage-lens.streamlit.app/) · [🔎 TopicLens](https://topic-lens.streamlit.app/) · [✈️ Airline Sentiment Analysis](https://airline-sentiment-lab.streamlit.app/) · [🌍 Polyglot Extractive Summarizer](https://polyglot-extractive-summarizer.streamlit.app/)
 
 ## 📖 Подробное описание проектов
+
+### 🔤 GlottoLens [LLM, RAG, LangChain]
+
+**Генерация, дополненная поиском (RAG), по трем открытым лингвистическим базам — Grambank, WALS и Glottolog: задайте вопрос о грамматике языка на английском, русском или другом языке и получите короткий ответ, в котором каждое утверждение ссылается на запись в базе.** Модель не отвечает из собственных знаний: она получает записанные значения и фрагменты текста, ссылается на них по меткам и прямо говорит, если данных нет; выдуманные метки обнаруживает код. Демо с кликабельными ссылками и доказательствами, на которые опирается ответ.
+
+**✨ Ключевые особенности:**
+*   **Ответы со ссылками, проверенными кодом:** Каждое утверждение ведет на конкретную запись WALS (datapoint) или Grambank (valueset); проверка ссылок помечает метки, которых нет в доказательствах; промпт ответа объясняет, что «no value recorded» означает отсутствие данных, а не отсутствие явления в языке.
+*   **Поиск с учетом языка:** Шаг переписывания (LLM) переводит бытовые формулировки в терминологию баз («есть ли слово вроде 'the'» → «definite articles») и выделяет язык; поиск языка по названиям Glottolog, кодам ISO и WALS и диалектам с подстановкой значения диалекта; SQLite FTS5 (BM25) ранжирует признаки, а не документы — это исправило большинство ранних провалов.
+*   **Гибридный поиск, проверенный измерениями:** Эмбеддинги Яндекса (256 измерений, в том же файле SQLite) добавляются через зарезервированные места: первые 6 остаются за BM25, 2 получают признаки, которые BM25 пропустил. Reciprocal rank fusion проверен и проиграл (38/41 против 41/41).
+*   **Строгая оценка качества:** 41 вопрос для настройки и 32 отложенных о 54 языках; ожидаемые значения берутся из базы, а не пишутся вручную; отложенные наборы закоммичены до первого прогона; каждый отчет записывает git-коммит, релизы данных и хеши промптов, вопросов и кода метрик. На наборе для настройки с гибридным поиском: найдено 41/41 признака, верно 33/33 значения, 8/8 честных ответов без данных, 0 неверных ссылок; на отложенном — 32/32 и 23/23.
+*   **Ограничения без прикрас:** LLM-судья перепроверяет метрики кода, каждое расхождение прочитано вручную; честность на отложенном наборе указана как 6/9, а не подогнана.
+*   **Ответ на языке вопроса:** Вопрос на испанском о русском однажды получил ответ на русском; теперь код определяет язык вопроса для 12 языков по письменности или служебным словам, а иначе полагается на модель — 25/25 на отложенных вопросах на 10 языках (21/25 до исправления).
+*   **Сравнение моделей-ответчиков:** Пять моделей Yandex AI Studio (Алиса AI, Алиса AI Flash, YandexGPT 5.1 Pro, DeepSeek V4.1 Flash, Qwen3.6) на одних и тех же доказательствах различаются не больше чем на один ответ; рассуждение не изменило ни одного вердикта, но потребовало в 2,5 раза больше выходных токенов.
+*   **Инженерия:** Закрепленные релизы CLDF атомарно собираются в одну базу SQLite; кеш на диске и журнал токенов для вызовов LLM; `BaseRetriever` и LCEL-цепочка LangChain отправляют те же промпты, что CLI (это проверяет тест); Streamlit-демо в публичном режиме, где посетители используют свой API-ключ, который нигде не сохраняется; тесты pytest без сети и CI с ruff.
+
+**🛠 Стек технологий:**
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![Yandex AI Studio](https://img.shields.io/badge/Yandex_AI_Studio-5282FF?style=for-the-badge&logo=yandexcloud&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite_FTS5-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+
+[**📂 Репозиторий проекта**](https://github.com/IlyaShaposhnikov/glotto-lens) · [**▶️ Демо**](https://glotto-lens.streamlit.app/)
+
 
 ### 🧭 TriageLens [ML, NLP, Semantic Search]
 
